@@ -245,6 +245,15 @@
   .truth-card p{margin-top:14px;font-size:17px}
   .y-card p{color:#2A2A20}
   .truth-card:not(.y-card) p{color:var(--text-2)}
+  .y-kicker{display:inline-block;font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;background:var(--black);color:var(--yellow);padding:6px 10px;border-radius:99px;margin-bottom:16px}
+  .y-card h3{max-width:17ch}
+  .y-card p strong{color:var(--black)}
+  .y-list{list-style:none;display:grid;gap:10px;margin:20px 0 24px}
+  .y-list li{position:relative;padding-left:30px;font-size:16px;color:#2A2A20;line-height:1.45}
+  .y-list li::before{content:"";position:absolute;left:0;top:3px;width:18px;height:18px;border-radius:5px;background:var(--black) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23FFE500' stroke-width='3.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12l5 5 9-10'/%3E%3C/svg%3E") center/12px no-repeat}
+  .y-list b{color:var(--black)}
+  .btn-dark{background:var(--black);color:var(--yellow);box-shadow:0 14px 30px -14px rgba(0,0,0,.6)}
+  .btn-dark:hover{box-shadow:0 18px 36px -14px rgba(0,0,0,.7)}
   .seal{display:inline-grid;place-items:center;width:92px;height:92px;border-radius:50%;border:2px solid var(--yellow);font-family:"Archivo";font-weight:900;font-style:italic;color:var(--yellow);line-height:1;text-align:center;margin-bottom:18px}
   .seal b{font-size:36px;display:block}
   .seal small{font-size:11px;letter-spacing:.1em;font-style:normal;font-weight:700}
@@ -604,8 +613,17 @@
 <section style="padding-top:0">
   <div class="wrap truth">
     <div class="truth-card y-card reveal">
-      <h3>Não é mágica.<br>É consistência.</h3>
-      <p>Ninguém muda o corpo em uma semana, e a gente não vai te prometer isso. O que o Shape 28° te dá é um plano simples pra você aparecer todo dia. Grau por grau.</p>
+      <span class="y-kicker">Por que funciona</span>
+      <h3>15 minutos hoje valem mais que 2 horas em dezembro.</h3>
+      <p>Quem chega pronto no verão não fez nada de outro mundo: <strong>só começou antes</strong>. O Shape 28° tira de você o trabalho de pensar. Você abre, faz o treino do dia e vê o termômetro subir. Grau por grau, até os 28°.</p>
+      <ul class="y-list">
+        <li><b>Treino pronto todo dia.</b> Nada de montar ficha ou ver vídeo aleatório.</li>
+        <li><b>Sobe de nível sozinho.</b> Cada semana esquenta um pouco, no seu ritmo.</li>
+        <li><b>Cabe em qualquer rotina.</b> 15 minutos, no quarto, sem equipamento.</li>
+      </ul>
+      <a class="btn btn-dark js-checkout" href="#oferta">Quero começar hoje
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
     </div>
     <div class="truth-card reveal">
       <div class="seal"><div><b>7</b><small>DIAS</small></div></div>
