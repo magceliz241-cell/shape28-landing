@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Shape 28° — Quando chegar nos 28 graus, esteja pronto</title>
+<meta name="description" content="Desafio de 28 dias de calistenia. 15 minutos por dia, em casa, sem equipamentos. Leve seu corpo dos 18° aos 28° antes do verão.">
+<meta property="og:title" content="Shape 28° — Seu shape começa antes dos 28 graus">
+<meta property="og:description" content="28 dias de calistenia. 15 min por dia. Em casa. Sem equipamentos.">
+<meta property="og:image" content="img/og.jpg">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0B0B0C">
+
+<!-- ============================================================
+     CONFIGURAÇÃO — troque só o que está aqui
+     ============================================================ -->
+<script>
+  // Link do checkout da Cakto (produto principal R$12)
+  window.CHECKOUT_URL = "https://pay.cakto.com.br/3cmfdhq_1128810";
+</script>
+<!-- Cole aqui o Pixel da Meta / TikTok / GA, se usar -->
+
+<link rel="preload" as="image" href="img/hero-mobile.webp" media="(max-width: 759px)">
+<link rel="preload" as="image" href="img/hero.webp" media="(min-width: 760px)">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,400..900;1,62..125,400..900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --black:#0B0B0C;
+    --ink-2:#141416;
+    --ink-3:#1D1D20;
+    --line:rgba(255,255,255,.10);
+    --text:#F4F3EF;
+    --text-2:#B9B8B3;
+    --text-3:#85847F;
+    --yellow:#FFE500;
+    --cold:#8DB3D6;
+    --mild:#C9D8B0;
+    --warm:#FF9A3C;
+    --radius:18px;
+    --wrap:1120px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  body{
+    background:var(--black);color:var(--text);
+    font-family:"Inter",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+    font-size:17px;line-height:1.6;padding-bottom:84px;overflow-x:hidden
+  }
+  img{display:block;max-width:100%}
+  a{color:inherit}
+  .wrap{max-width:var(--wrap);margin:0 auto;padding:0 16px}
+  section{padding:80px 0;position:relative}
+
+  /* ---------- Tipografia ---------- */
+  .h2,h3,.logo{font-family:"Archivo",sans-serif}
+  .h2{
+    font-size:clamp(34px,6.4vw,64px);font-weight:900;font-style:italic;font-stretch:88%;
+    text-transform:uppercase;line-height:.98;letter-spacing:-.01em;max-width:16ch
+  }
+  .y{color:var(--yellow)}
+  .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--yellow);margin-bottom:18px}
+  .eyebrow::before{content:"";width:18px;height:2px;background:currentColor}
+  .lead{color:var(--text-2);font-size:18px;max-width:56ch;margin-top:18px}
+  .lead strong{color:var(--text)}
+
+  /* ---------- Logo ---------- */
+  .logo{font-weight:900;font-style:italic;letter-spacing:-.02em;line-height:1;display:inline-flex;align-items:flex-start}
+  .logo b{color:var(--yellow);font-weight:900;margin-left:.08em}
+  .logo sup{color:var(--yellow);font-size:.42em;margin-left:.04em;font-weight:800;position:relative;top:.05em}
+
+  /* ---------- Botões ---------- */
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:10px;
+    background:var(--yellow);color:var(--black);text-decoration:none;border:0;cursor:pointer;
+    font-family:"Archivo",sans-serif;font-weight:800;font-size:17px;letter-spacing:.02em;text-transform:uppercase;
+    padding:19px 28px;border-radius:12px;text-align:center;
+    box-shadow:0 12px 30px -12px rgba(255,229,0,.55);
+    transition:transform .15s ease,box-shadow .15s ease
+  }
+  .btn:hover{transform:translateY(-2px);box-shadow:0 18px 36px -12px rgba(255,229,0,.7)}
+  .btn:active{transform:none}
+  .btn svg{width:20px;height:20px;flex:none}
+  .btn-ghost{background:rgba(255,255,255,.06);color:var(--text);box-shadow:none;border:1px solid rgba(255,255,255,.22);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+  .btn-ghost:hover{background:rgba(255,255,255,.12);box-shadow:none}
+  .btn-block{width:100%}
+  .fine{font-size:14px;color:var(--text-3)}
+
+  /* ---------- Topbar ---------- */
+  .topbar{background:var(--yellow);color:var(--black);text-align:center;font-size:13px;font-weight:700;padding:9px 16px;letter-spacing:.02em}
+
+  /* ---------- Foto que se funde ao fundo ---------- */
+  /* --mx = fade horizontal, --my = fade vertical; as duas se somam (bordas suaves nos 4 lados) */
+  .blend{
+    position:relative;
+    --mx:linear-gradient(90deg,transparent 0%,#000 9%,#000 91%,transparent 100%);
+    --my:linear-gradient(180deg,transparent 0%,#000 12%,#000 56%,transparent 100%);
+  }
+  .blend img{
+    width:100%;height:100%;object-fit:cover;
+    -webkit-mask-image:var(--mx),var(--my);mask-image:var(--mx),var(--my);
+    -webkit-mask-composite:source-in;mask-composite:intersect
+  }
+  .deg{
+    position:absolute;font-family:"Archivo";font-weight:900;font-style:italic;
+    font-size:76px;line-height:1;letter-spacing:-.03em;text-shadow:0 6px 40px rgba(0,0,0,.55)
+  }
+
+  /* ---------- HERO ---------- */
+  .hero{position:relative;padding:0 0 48px;overflow:hidden;isolation:isolate}
+  .hero picture{display:block;position:relative;height:64svh;min-height:420px;max-height:640px;z-index:-2}
+  .hero .bg{width:100%;height:100%;object-fit:cover;object-position:62% 20%}
+  .hero picture::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,11,12,.6) 0%,rgba(11,11,12,0) 20%,rgba(11,11,12,0) 55%,var(--black) 100%)}
+  .hero > .wrap{margin-top:-96px;position:relative}
+  .hero-top{position:absolute;top:0;left:0;right:0;padding:20px 0;z-index:2}
+  .hero-top .wrap{display:flex;justify-content:space-between;align-items:center}
+  .hero-top .logo{font-size:24px}
+  .temp-pill{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:700;background:rgba(11,11,12,.55);border:1px solid var(--line);padding:7px 12px;border-radius:99px;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+  .temp-pill i{width:8px;height:8px;border-radius:50%;background:var(--cold);box-shadow:0 0 0 3px rgba(141,179,214,.25)}
+  .temp-pill b{color:var(--cold)}
+  .hero h1{
+    font-family:"Archivo",sans-serif;font-weight:900;font-style:italic;font-stretch:85%;text-transform:uppercase;
+    font-size:clamp(44px,11vw,96px);line-height:.92;letter-spacing:-.015em;max-width:12ch
+  }
+  .hero .lead{color:#D8D7D2;max-width:42ch}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin:22px 0 26px}
+  .chip{display:inline-flex;align-items:center;gap:7px;font-size:13px;font-weight:600;color:#E6E5E0;padding:7px 12px;border-radius:99px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14)}
+  .chip svg{width:15px;height:15px;color:var(--yellow)}
+  .hero-cta{display:flex;flex-direction:column;gap:10px}
+  .hero-cta .fine{margin-top:4px}
+
+  /* ---------- PROBLEMA ---------- */
+  .problem{display:grid;gap:8px;align-items:center}
+  .problem .blend{aspect-ratio:4/5;margin:0 -16px}
+  .problem .blend img{object-position:50% 38%}
+  .problem .deg{left:16px;bottom:22%;color:var(--cold)}
+  .problem-text{position:relative;margin-top:-18%}
+  .problem-text p{color:var(--text-2);font-size:18.5px;margin-top:18px;max-width:46ch}
+  .problem-text p strong{color:var(--text)}
+  .quote{margin-top:28px;padding-left:18px;border-left:3px solid var(--yellow);font-family:"Archivo";font-style:italic;font-weight:800;font-size:clamp(22px,3.4vw,28px);line-height:1.2;color:var(--text)!important;max-width:26ch}
+
+  /* ---------- JORNADA 18° → 28° ---------- */
+  .journey{background:var(--stage-bg,#0E1116);transition:background-color .8s ease}
+  .journey::before,.journey::after{content:"";position:absolute;left:0;right:0;height:120px;pointer-events:none}
+  .journey::before{top:0;background:linear-gradient(180deg,var(--black),transparent)}
+  .journey::after{bottom:0;background:linear-gradient(0deg,var(--black),transparent)}
+  .journey-head{max-width:720px;position:relative}
+  .journey-grid{display:grid;grid-template-columns:30px minmax(0,1fr);gap:14px;margin-top:40px;position:relative;z-index:1}
+
+  .thermo{position:sticky;top:76px;align-self:start;display:flex;flex-direction:column;align-items:center;gap:10px;height:max-content}
+  .thermo .now{font-family:"Archivo";font-weight:900;font-style:italic;font-size:15px;line-height:1;letter-spacing:-.02em;color:var(--t-color,var(--cold));transition:color .5s}
+  .thermo .tube{width:10px;height:min(48vh,380px);border-radius:99px;background:rgba(255,255,255,.1);position:relative;overflow:hidden}
+  .thermo .tube i{position:absolute;left:0;right:0;bottom:0;height:var(--t-fill,25%);background:var(--t-color,var(--cold));border-radius:99px;transition:height .6s ease,background-color .5s}
+  .thermo .ticks{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:space-between;padding:6px 0}
+  .thermo .bulb{width:22px;height:22px;border-radius:50%;background:var(--t-color,var(--cold));margin-top:-14px;transition:background-color .5s;box-shadow:0 0 24px var(--t-color,var(--cold))}
+
+  .stages{display:grid;gap:44px}
+  .stage{position:relative}
+  .stage .blend{aspect-ratio:1/1;--mx:linear-gradient(90deg,transparent 0%,#000 7%,#000 93%,transparent 100%);--my:linear-gradient(180deg,transparent 0%,#000 10%,#000 50%,transparent 96%)}
+  .stage .deg{left:14px;bottom:40%;font-size:64px}
+  .stage-body{position:relative;margin-top:-26%;padding:0 4px}
+  .stage-week{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--text-3)}
+  .stage h3{font-size:30px;font-weight:900;font-style:italic;font-stretch:88%;text-transform:uppercase;line-height:1;margin:8px 0 10px}
+  .stage p{color:var(--text-2)}
+  .stage .bar{height:4px;border-radius:99px;background:rgba(255,255,255,.08);margin-top:18px;overflow:hidden;max-width:320px}
+  .stage .bar i{display:block;height:100%;border-radius:99px}
+  .s18 .deg,.s18 h3{color:var(--cold)}  .s18 .bar i{width:25%;background:var(--cold)}
+  .s22 .deg,.s22 h3{color:var(--mild)}  .s22 .bar i{width:50%;background:var(--mild)}
+  .s25 .deg,.s25 h3{color:var(--warm)}  .s25 .bar i{width:75%;background:var(--warm)}
+  .s28 .deg,.s28 h3{color:var(--yellow)}.s28 .bar i{width:100%;background:var(--yellow)}
+  .s18 img{object-position:50% 72%}
+  .s22 img{object-position:50% 58%}
+  .s25 img{object-position:28% 55%}
+  .s28 img{object-position:50% 40%}
+
+  /* ---------- O QUE É ---------- */
+  .what-grid{display:grid;gap:12px;margin-top:44px}
+  .feat{background:var(--ink-2);border:1px solid var(--line);border-radius:var(--radius);padding:22px;display:flex;gap:16px;align-items:flex-start}
+  .feat .ico{flex:none;width:44px;height:44px;border-radius:12px;background:rgba(255,229,0,.1);color:var(--yellow);display:grid;place-items:center}
+  .feat .ico svg{width:22px;height:22px}
+  .feat h3{font-size:19px;font-weight:800;margin-bottom:2px}
+  .feat p{color:var(--text-2);font-size:15.5px}
+
+  /* ---------- NA FRENTE ---------- */
+  .ahead-nums{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:40px}
+  .num-card{border-radius:20px;padding:22px 14px 18px;background:var(--ink-2);border:1px solid var(--line)}
+  .num-card b{display:block;font-family:"Archivo";font-weight:900;font-style:italic;font-size:clamp(44px,10vw,96px);line-height:.9;letter-spacing:-.03em}
+  .num-card span{display:block;font-size:13px;color:var(--text-3);font-weight:600;margin-top:10px}
+  .num-card:nth-child(1) b{color:var(--yellow)}
+  .num-card:nth-child(2) b{color:rgba(255,229,0,.55)}
+  .num-card:nth-child(3) b{color:rgba(255,229,0,.3)}
+
+  /* ---------- QUIZ CTA ---------- */
+  .quiz-cta{
+    border-radius:28px;padding:36px 22px;position:relative;overflow:hidden;isolation:isolate;
+    background:radial-gradient(120% 90% at 100% 0%,rgba(255,229,0,.14),transparent 55%),var(--ink-2);
+    border:1px solid rgba(255,229,0,.25);display:grid;gap:30px;align-items:center
+  }
+  .quiz-cta .h2{max-width:13ch}
+  .quiz-points{list-style:none;display:grid;gap:10px;margin-top:22px}
+  .quiz-points li{display:flex;gap:12px;align-items:flex-start;color:var(--text-2);font-size:16px}
+  .quiz-points li b{color:var(--text)}
+  .quiz-points li i{flex:none;width:26px;height:26px;border-radius:8px;display:grid;place-items:center;font-style:normal;font-family:"Archivo";font-weight:900;font-size:12px;color:var(--black);margin-top:1px}
+  .mini-thermo{display:flex;align-items:flex-end;gap:10px;height:130px;padding-top:26px}
+  .mini-thermo i{flex:1;border-radius:10px 10px 4px 4px;position:relative}
+  .mini-thermo i::after{content:attr(data-t);position:absolute;top:-24px;left:50%;transform:translateX(-50%);font-size:13px;font-weight:700;color:var(--text-3);font-style:normal}
+  .mini-thermo i:nth-child(1){height:30%;background:var(--cold)}
+  .mini-thermo i:nth-child(2){height:50%;background:var(--mild)}
+  .mini-thermo i:nth-child(3){height:72%;background:var(--warm)}
+  .mini-thermo i:nth-child(4){height:100%;background:var(--yellow)}
+
+  /* ---------- OFERTA ---------- */
+  .offer-sec{overflow:hidden;isolation:isolate}
+  .offer-bg{position:absolute;left:0;right:0;top:0;height:720px;z-index:-1;opacity:.55}
+  .offer-bg img{width:100%;height:100%;object-fit:cover;object-position:50% 30%;
+    -webkit-mask-image:linear-gradient(180deg,transparent 0%,#000 25%,#000 45%,transparent 100%);mask-image:linear-gradient(180deg,transparent 0%,#000 25%,#000 45%,transparent 100%)}
+  .offer{
+    max-width:560px;margin:44px auto 0;background:var(--text);color:var(--black);border-radius:28px;
+    padding:34px 22px 26px;text-align:center;position:relative;box-shadow:0 30px 80px -30px rgba(255,229,0,.35)
+  }
+  .offer-tag{position:absolute;top:-15px;left:50%;transform:translateX(-50%);background:var(--yellow);color:var(--black);font-size:12px;font-weight:800;padding:7px 14px;border-radius:99px;white-space:nowrap;letter-spacing:.08em;font-family:"Archivo"}
+  .offer .logo{font-size:40px;color:var(--black)}
+  .offer .logo b{color:var(--black);background:var(--yellow);padding:0 .12em;border-radius:.08em}
+  .offer .logo sup{color:var(--black)}
+  .offer-sub{color:#55544F;font-size:15px;margin-top:8px}
+  .offer-list{list-style:none;text-align:left;display:grid;gap:11px;margin:24px 0;padding:22px 0;border-top:1px dashed #D2D0C8;border-bottom:1px dashed #D2D0C8}
+  .offer-list li{display:flex;gap:11px;font-weight:500;color:#2A2A2C}
+  .offer-list svg{flex:none;width:20px;height:20px;margin-top:3px;color:#0B0B0C;background:var(--yellow);border-radius:6px;padding:3px}
+  .price{font-family:"Archivo";font-weight:900;font-style:italic;font-size:80px;line-height:1;letter-spacing:-.04em}
+  .price sup{font-size:28px;vertical-align:top;position:relative;top:12px;margin-right:4px}
+  .price-sub{color:#6A6964;font-size:15px;margin:8px 0 22px}
+  .offer .btn{background:var(--black);color:var(--yellow);box-shadow:0 14px 30px -14px rgba(0,0,0,.6)}
+  .bump{margin-top:16px;background:#FFF7B0;border-radius:14px;padding:13px 15px;font-size:14.5px;text-align:left;display:flex;gap:10px;align-items:flex-start;color:#2A2A2C}
+  .pay{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin-top:16px;font-size:13px;color:#6A6964;font-weight:600}
+  .pay span{display:inline-flex;align-items:center;gap:6px}
+  .pay svg{width:15px;height:15px}
+
+  /* ---------- CONSISTÊNCIA + GARANTIA ---------- */
+  .truth{display:grid;gap:14px}
+  .truth-card{border-radius:24px;padding:30px 24px;border:1px solid var(--line);background:var(--ink-2)}
+  .truth-card.y-card{background:var(--yellow);color:var(--black);border:0}
+  .truth-card h3{font-size:clamp(30px,5vw,44px);font-weight:900;font-style:italic;font-stretch:88%;text-transform:uppercase;line-height:.98}
+  .truth-card p{margin-top:14px;font-size:17px}
+  .y-card p{color:#2A2A20}
+  .truth-card:not(.y-card) p{color:var(--text-2)}
+  .seal{display:inline-grid;place-items:center;width:92px;height:92px;border-radius:50%;border:2px solid var(--yellow);font-family:"Archivo";font-weight:900;font-style:italic;color:var(--yellow);line-height:1;text-align:center;margin-bottom:18px}
+  .seal b{font-size:36px;display:block}
+  .seal small{font-size:11px;letter-spacing:.1em;font-style:normal;font-weight:700}
+
+  /* ---------- FAQ ---------- */
+  .faq{margin-top:36px;display:grid;gap:10px;max-width:780px}
+  details{background:var(--ink-2);border:1px solid var(--line);border-radius:16px;padding:0 20px}
+  summary{list-style:none;cursor:pointer;padding:18px 0;font-weight:700;display:flex;justify-content:space-between;gap:16px;align-items:center}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"+";font-size:24px;font-weight:500;color:var(--yellow);flex:none;transition:transform .2s}
+  details[open] summary::after{transform:rotate(45deg)}
+  details p{padding:0 0 18px;color:var(--text-2)}
+
+  /* ---------- FINAL ---------- */
+  .final{position:relative;overflow:hidden;isolation:isolate;padding:0 0 90px;text-align:center}
+  .final .final-img{position:relative;height:62svh;max-height:560px;z-index:-1}
+  .final .final-img img{width:100%;height:100%;object-fit:cover;object-position:70% 50%}
+  .final .final-img::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,var(--black) 0%,transparent 28%,transparent 55%,var(--black) 100%)}
+  .final .wrap{margin-top:-90px;position:relative}
+  .final .h2{margin:0 auto;max-width:18ch;text-shadow:0 4px 40px rgba(0,0,0,.45)}
+  .final .lead{margin:18px auto 30px;color:#E8E3DA}
+  footer{padding:36px 0 44px;border-top:1px solid var(--line);text-align:center;font-size:13px;color:var(--text-3)}
+  footer .logo{font-size:26px;margin-bottom:14px}
+  footer p+p{margin-top:8px}
+
+  /* ---------- Barra fixa mobile ---------- */
+  .sticky{
+    position:fixed;left:0;right:0;bottom:0;z-index:40;background:rgba(11,11,12,.92);
+    backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-top:1px solid var(--line);
+    padding:12px 16px calc(12px + env(safe-area-inset-bottom));display:flex;align-items:center;gap:14px;
+    transform:translateY(110%);transition:transform .3s ease
+  }
+  .sticky.show{transform:none}
+  .sticky .s-price{line-height:1.15}
+  .sticky .s-price b{font-family:"Archivo";font-style:italic;font-size:22px;font-weight:900}
+  .sticky .s-price small{display:block;font-size:12px;color:var(--text-3)}
+  .sticky .btn{flex:1;padding:15px 16px;font-size:15px}
+
+  /* ================= QUIZ ================= */
+  .quiz{position:fixed;inset:0;z-index:100;background:var(--black);display:none;flex-direction:column;overflow-y:auto}
+  .quiz.open{display:flex}
+  .quiz-top{display:flex;align-items:center;gap:14px;padding:16px;max-width:680px;width:100%;margin:0 auto}
+  .quiz-top .logo{font-size:20px}
+  .q-progress{flex:1;height:8px;border-radius:99px;background:rgba(255,255,255,.08);overflow:hidden}
+  .q-progress i{display:block;height:100%;width:0;border-radius:99px;background:linear-gradient(90deg,var(--cold),var(--mild),var(--warm),var(--yellow));background-size:680px 100%;transition:width .4s ease}
+  .q-close{background:none;border:0;color:var(--text-2);cursor:pointer;width:40px;height:40px;border-radius:10px;display:grid;place-items:center}
+  .q-close:hover{background:rgba(255,255,255,.06)}
+  .q-close svg{width:22px;height:22px}
+  .quiz-body{flex:1;max-width:680px;width:100%;margin:0 auto;padding:18px 16px 40px}
+  .q-step{font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--text-3)}
+  .q-title{font-family:"Archivo";font-weight:900;font-style:italic;font-stretch:90%;text-transform:uppercase;font-size:clamp(28px,6vw,40px);line-height:1;margin:10px 0 26px}
+  .q-opts{display:grid;gap:10px}
+  .q-opt{
+    text-align:left;background:var(--ink-2);border:1.5px solid var(--line);color:var(--text);cursor:pointer;
+    font:600 17px/1.35 "Inter",sans-serif;padding:18px;border-radius:14px;display:flex;align-items:center;gap:14px;
+    transition:border-color .15s,background .15s,transform .1s
+  }
+  .q-opt:hover{border-color:rgba(255,229,0,.5)}
+  .q-opt:active{transform:scale(.99)}
+  .q-opt.sel{border-color:var(--yellow);background:rgba(255,229,0,.08)}
+  .q-opt .k{flex:none;width:30px;height:30px;border-radius:8px;background:rgba(255,255,255,.07);display:grid;place-items:center;font-size:13px;font-weight:700;color:var(--text-2)}
+  .q-opt.sel .k{background:var(--yellow);color:var(--black)}
+  .q-back{margin-top:18px;background:none;border:0;color:var(--text-3);font:600 14px "Inter";cursor:pointer;padding:8px 0}
+  .q-back:hover{color:var(--text)}
+  .q-anim{animation:qin .35s ease both}
+  @keyframes qin{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+  .q-loading{text-align:center;padding-top:10vh}
+  .q-loading .big{font-family:"Archivo";font-weight:900;font-style:italic;font-size:96px;line-height:1;color:var(--yellow)}
+  .q-loading p{color:var(--text-2);margin-top:12px}
+  .r-head{display:flex;align-items:flex-end;gap:18px;margin:6px 0 20px}
+  .r-deg,.r-goal{font-family:"Archivo";font-weight:900;font-style:italic;font-size:clamp(64px,20vw,110px);line-height:.85;letter-spacing:-.04em}
+  .r-goal{color:var(--yellow)}
+  .r-arrow{font-family:"Archivo";font-weight:900;font-style:italic;font-size:44px;color:var(--text-3);line-height:1;padding-bottom:6px}
+  .r-level{display:inline-block;font-size:13px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:6px 12px;border-radius:99px;background:rgba(255,255,255,.08);margin-bottom:14px}
+  .r-adapt{display:flex;gap:14px;align-items:center;background:var(--ink-2);border:1px solid rgba(255,229,0,.3);border-radius:16px;padding:16px 18px;margin:18px 0 6px}
+  .r-adapt b{font-family:"Archivo";font-weight:900;font-style:italic;font-size:clamp(30px,8vw,40px);line-height:1;color:var(--yellow);white-space:nowrap}
+  .r-adapt span{font-size:15px;color:var(--text-2);line-height:1.4}
+  .r-adapt span strong{color:var(--text);display:block;font-size:15px}
+  .r-note{font-size:12.5px;color:var(--text-3);margin-bottom:6px}
+  .r-text{color:var(--text-2);font-size:17px;margin-top:16px}
+  .r-text strong{color:var(--text)}
+  .r-list{list-style:none;display:grid;gap:10px;margin:22px 0 26px}
+  .r-list li{background:var(--ink-2);border:1px solid var(--line);border-radius:14px;padding:14px 16px;display:flex;gap:12px;font-size:15.5px;color:var(--text-2)}
+  .r-list li b{color:var(--text);display:block;font-size:15px;margin-bottom:2px}
+  .r-list .n{flex:none;width:26px;height:26px;border-radius:8px;background:var(--yellow);color:var(--black);display:grid;place-items:center;font-weight:800;font-size:13px}
+  .r-price{text-align:center;margin-top:12px;font-size:14px;color:var(--text-3)}
+
+  /* ---------- Revelar ---------- */
+  .reveal{opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .7s ease}
+  .reveal.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    .reveal{opacity:1;transform:none;transition:none}
+    .q-anim{animation:none}
+    .btn,.sticky,.journey{transition:none}
+  }
+
+  /* ================= DESKTOP ================= */
+  @media (min-width:760px){
+    body{padding-bottom:0}
+    section{padding:120px 0}
+    .sticky{display:none}
+
+    .hero{min-height:88vh;display:flex;align-items:center;padding:120px 0 80px}
+    .hero picture{position:absolute;inset:0;height:auto;min-height:0;max-height:none}
+    .hero picture::after{background:linear-gradient(90deg,rgba(11,11,12,.94) 0%,rgba(11,11,12,.75) 38%,rgba(11,11,12,.1) 65%,rgba(11,11,12,0) 100%),linear-gradient(180deg,rgba(11,11,12,.5) 0%,transparent 18%,transparent 70%,var(--black) 100%)}
+    .hero > .wrap{margin-top:0;width:100%}
+    .hero .bg{object-position:center 30%}
+    .hero-top{padding:26px 0}
+    .hero-cta{flex-direction:row;align-items:center;flex-wrap:wrap;gap:12px}
+    .hero-cta .fine{flex-basis:100%}
+
+    .problem{grid-template-columns:1fr 1fr;gap:40px}
+    .problem .blend{margin:0 0 0 -60px;aspect-ratio:4/5;
+      --mx:linear-gradient(90deg,transparent 0%,#000 18%,#000 62%,transparent 100%);
+      --my:linear-gradient(180deg,transparent 0%,#000 16%,#000 72%,transparent 100%)}
+    .problem .deg{left:60px;bottom:14%;font-size:96px}
+    .problem-text{margin-top:0}
+
+    .journey-grid{grid-template-columns:110px minmax(0,1fr);gap:40px}
+    .thermo{top:110px;gap:16px}
+    .thermo .now{font-size:60px;letter-spacing:-.04em}
+    .thermo .tube{width:22px;height:340px}
+    .thermo .bulb{width:44px;height:44px;margin-top:-26px}
+    .stages{gap:36px}
+    .stage{display:grid;grid-template-columns:1.1fr 1fr;align-items:center}
+    .stage .blend{aspect-ratio:5/4;
+      --mx:linear-gradient(90deg,transparent 0%,#000 12%,#000 52%,transparent 100%);
+      --my:linear-gradient(180deg,transparent 0%,#000 16%,#000 80%,transparent 100%)}
+    .stage:nth-child(even){grid-template-columns:1fr 1.1fr}
+    .stage:nth-child(even) .blend{order:2;--mx:linear-gradient(270deg,transparent 0%,#000 12%,#000 52%,transparent 100%)}
+    .stage:nth-child(even) .deg{left:auto;right:18px}
+    .stage-body{margin:0 0 0 -40px;padding:0}
+    .stage:nth-child(even) .stage-body{margin:0 -40px 0 0}
+    .stage .deg{bottom:8%;left:18px;font-size:92px}
+    .stage h3{font-size:42px}
+
+    .what-grid{grid-template-columns:repeat(3,1fr)}
+    .ahead-nums{gap:16px}
+    .num-card{padding:34px 26px 26px}
+    .quiz-cta{grid-template-columns:1.3fr .7fr;padding:56px 52px}
+    .mini-thermo{height:220px}
+    .offer-bg{height:900px}
+    .offer{padding:44px 44px 32px}
+    .truth{grid-template-columns:1.2fr .8fr}
+    .truth-card{padding:44px 40px}
+
+    .final{padding:0;text-align:left;min-height:88vh;display:flex;align-items:center}
+    .final .final-img{position:absolute;inset:0;height:auto;max-height:none}
+    .final .final-img::after{background:linear-gradient(180deg,var(--black) 0%,transparent 25%,transparent 75%,var(--black) 100%),linear-gradient(90deg,rgba(11,11,12,.75) 0%,rgba(11,11,12,.2) 50%,transparent 70%)}
+    .final .wrap{margin-top:0;width:100%;padding-top:120px;padding-bottom:120px}
+    .final .h2{margin:0;max-width:15ch}
+    .final .lead{margin-left:0}
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar"><span class="js-summer">Faltam <b class="js-weeks">poucas semanas</b> pro verão</span> · Acesso por R$12</div>
+
+<!-- ================= HERO ================= -->
+<header class="hero">
+  <picture>
+    <source media="(min-width:760px)" srcset="img/hero.webp">
+    <img class="bg" src="img/hero-mobile.webp" alt="Homem fazendo flexão no chão do quarto ao amanhecer" fetchpriority="high">
+  </picture>
+  <div class="hero-top">
+    <div class="wrap">
+      <span class="logo" aria-label="Shape 28 graus">SHAPE<b>28</b><sup>°</sup></span>
+      <span class="temp-pill"><i></i>Corpo parado: <b>18°</b></span>
+    </div>
+  </div>
+  <div class="wrap">
+    <h1>Quando o verão chegar, você vai querer estar nos <span class="y">28°</span>.</h1>
+    <p class="lead">Parado, seu corpo está em 18°. Em 28 dias de calistenia, 15 minutos por dia em casa, você leva ele aos 28°: aquecido, no ritmo e pronto antes de todo mundo.</p>
+    <div class="chips">
+      <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2 2M9 2h6"/></svg>15 min por dia</span>
+      <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg>Em casa</span>
+      <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M6 6l12 12"/></svg>Sem equipamentos</span>
+      <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Sem mensalidade</span>
+    </div>
+    <div class="hero-cta">
+      <button class="btn js-quiz" type="button">
+        Descobrir meu ponto de partida
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </button>
+      <a class="btn btn-ghost js-checkout" href="#oferta">Ver a oferta</a>
+      <p class="fine">Em 1 minuto: sua temperatura hoje e quantos dias seu corpo leva pra pegar o ritmo.</p>
+    </div>
+  </div>
+</header>
+
+<!-- ================= PROBLEMA ================= -->
+<section>
+  <div class="wrap problem">
+    <div class="blend fade-b reveal">
+      <img src="img/18-parado.webp" alt="Homem sentado na cama à noite mexendo no celular, desanimado" loading="lazy" width="900" height="1200">
+      <span class="deg">18°</span>
+    </div>
+    <div class="problem-text">
+      <span class="eyebrow reveal">Corpo parado: 18°</span>
+      <h2 class="h2 reveal">Todo ano o verão chega. <span class="y">E todo ano pega muita gente parada.</span></h2>
+      <p class="reveal">É sempre igual: dezembro chega, vêm as férias, o réveillon, a praia, e bate aquele <strong>“devia ter começado antes”</strong>. Aí vem a correria de última hora, que quase nunca dá certo.</p>
+      <p class="reveal">O shape de verão não se constrói no verão. <strong>Ele se constrói antes</strong>, enquanto ninguém está olhando.</p>
+      <p class="quote reveal">Por isso existe o Shape 28°: pra você esquentar o corpo enquanto os outros ainda esperam.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= JORNADA 18° → 28° ================= -->
+<section class="journey" id="jornada">
+  <div class="wrap">
+    <div class="journey-head">
+      <span class="eyebrow reveal">O método 18° → 28°</span>
+      <h2 class="h2 reveal">Cada semana, <span class="y">o termômetro sobe.</span></h2>
+      <p class="lead reveal">Os 28 dias são divididos em 4 temperaturas. Você começa na temperatura em que seu corpo está hoje e esquenta um pouco a cada semana até chegar nos 28°.</p>
+    </div>
+
+    <div class="journey-grid">
+      <div class="thermo" aria-hidden="true">
+        <span class="now" id="thermoNow">18°</span>
+        <div class="tube"><i></i></div>
+        <div class="bulb"></div>
+      </div>
+
+      <div class="stages">
+        <article class="stage s18 reveal" data-t="18" data-c="var(--cold)" data-f="25%" data-bg="#0D1218">
+          <div class="blend fade-b"><img src="img/18-prancha.webp" alt="Homem de moletom fazendo prancha no quarto numa manhã fria" loading="lazy" width="900" height="1200"><span class="deg">18°</span></div>
+          <div class="stage-body">
+            <span class="stage-week">Semana 1 · Ligar o motor</span>
+            <h3>Corpo frio.</h3>
+            <p>Seu corpo ainda está parado. Movimentos base da calistenia, execução certa e o compromisso mais importante do desafio: aparecer 15 minutos por dia.</p>
+            <div class="bar"><i></i></div>
+          </div>
+        </article>
+        <article class="stage s22 reveal" data-t="22" data-c="var(--mild)" data-f="50%" data-bg="#101411">
+          <div class="blend fade-b"><img src="img/22-casa.webp" alt="Homem fazendo agachamento no quarto pela manhã" loading="lazy" width="900" height="1200"><span class="deg">22°</span></div>
+          <div class="stage-body">
+            <span class="stage-week">Semana 2 · Pegar o ritmo</span>
+            <h3>Você já começou.</h3>
+            <p>O corpo para de estranhar. Mais repetições, menos descanso, e o treino deixa de ser esforço pra virar parte do seu dia.</p>
+            <div class="bar"><i></i></div>
+          </div>
+        </article>
+        <article class="stage s25 reveal" data-t="25" data-c="var(--warm)" data-f="75%" data-bg="#17100B">
+          <div class="blend fade-b"><img src="img/25-banco.webp" alt="Homem fazendo flexão inclinada num banco da orla ao pôr do sol" loading="lazy" width="900" height="1200"><span class="deg">25°</span></div>
+          <div class="stage-body">
+            <span class="stage-week">Semana 3 · Esquentar</span>
+            <h3>O verão está chegando.</h3>
+            <p>Aqui o treino esquenta de verdade: variações mais difíceis e circuitos mais intensos. É quando você começa a sentir mais força e firmeza.</p>
+            <div class="bar"><i></i></div>
+          </div>
+        </article>
+        <article class="stage s28 reveal" data-t="28" data-c="var(--yellow)" data-f="100%" data-bg="#16150A">
+          <div class="blend fade-b"><img src="img/28-praia.webp" alt="Homem sem camisa caminhando em direção ao mar num dia de sol" loading="lazy" width="900" height="1200"><span class="deg">28°</span></div>
+          <div class="stage-body">
+            <span class="stage-week">Semana 4 · Pronto</span>
+            <h3>Você está pronto.</h3>
+            <p>Enquanto os outros começam do zero, você fecha o ciclo com uma rotina que já é sua. E pode repetir pra entrar no verão ainda mais na frente.</p>
+            <div class="bar"><i></i></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= O QUE É ================= -->
+<section>
+  <div class="wrap">
+    <span class="eyebrow reveal">O que você precisa</span>
+    <h2 class="h2 reveal">Só do seu <span class="y">corpo</span> e da sua <span class="y">disposição.</span></h2>
+    <div class="what-grid">
+      <div class="feat reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2 2M9 2h6"/></svg></div><div><h3>15 minutos por dia</h3><p>Menos que um episódio de série. Cabe em qualquer rotina.</p></div></div>
+      <div class="feat reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg></div><div><h3>Em casa</h3><p>Quarto, sala ou quintal. Sem trânsito e sem fila de aparelho.</p></div></div>
+      <div class="feat reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M6 6l12 12"/></svg></div><div><h3>Sem equipamentos</h3><p>Calistenia usa o peso do seu corpo. Só isso.</p></div></div>
+      <div class="feat reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div><div><h3>Sem mensalidade</h3><p>R$12 uma vez. Sem boleto de academia todo mês.</p></div></div>
+      <div class="feat reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20V10M18 20V4M6 20v-4"/></svg></div><div><h3>Da sua temperatura</h3><p>Você começa de onde está e esquenta no seu ritmo.</p></div></div>
+      <div class="feat reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M11 18h2"/></svg></div><div><h3>No seu celular</h3><p>Abre, vê o treino do dia e faz. Seu progresso fica salvo.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= NA FRENTE ================= -->
+<section style="padding-top:0">
+  <div class="wrap">
+    <span class="eyebrow reveal">Enquanto todo mundo espera o verão chegar</span>
+    <h2 class="h2 reveal">Você pode começar <span class="y">agora.</span></h2>
+    <p class="lead reveal">Quando o verão chegar e todo mundo correr atrás do prejuízo, <strong>você já vai estar na frente.</strong> <span class="js-cycles-line">Até o verão dá tempo de fazer <strong class="js-cycles">vários ciclos</strong> do Shape 28°.</span></p>
+    <div class="ahead-nums">
+      <div class="num-card reveal"><b>28</b><span>dias na frente</span></div>
+      <div class="num-card reveal"><b>56</b><span>dias na frente</span></div>
+      <div class="num-card reveal"><b>84</b><span>dias na frente</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= QUIZ CTA ================= -->
+<section style="padding-top:0" id="quiz">
+  <div class="wrap">
+    <div class="quiz-cta reveal">
+      <div>
+        <span class="eyebrow">Diagnóstico gratuito · 1 minuto</span>
+        <h2 class="h2">Descubra seu <span class="y">ponto de partida.</span></h2>
+        <p class="lead">Responda 5 perguntas rápidas e veja:</p>
+        <ul class="quiz-points">
+          <li><i style="background:var(--cold)">1</i><span><b>Sua temperatura hoje</b>, de 18° a 22°</span></li>
+          <li><i style="background:var(--warm)">2</i><span><b>Quantos dias seu corpo leva</b> pra se acostumar com o treino</span></li>
+          <li><i style="background:var(--yellow)">3</i><span><b>Por onde começar</b> e o melhor horário pra você</span></li>
+        </ul>
+        <button class="btn js-quiz" type="button" style="margin-top:28px">
+          Descobrir meu ponto de partida
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </button>
+      </div>
+      <div class="mini-thermo" aria-hidden="true"><i data-t="18°"></i><i data-t="22°"></i><i data-t="25°"></i><i data-t="28°"></i></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= OFERTA ================= -->
+<section id="oferta" class="offer-sec">
+  <div class="offer-bg" aria-hidden="true"><img src="img/28-praia.webp" alt="" loading="lazy" width="900" height="1200"></div>
+  <div class="wrap">
+    <div style="text-align:center">
+      <span class="eyebrow reveal">Oferta de lançamento</span>
+      <h2 class="h2 reveal" style="margin:0 auto">Menos que um lanche <span class="y">pra chegar pronto nos 28°.</span></h2>
+    </div>
+    <div class="offer reveal">
+      <span class="offer-tag">ACESSO COMPLETO</span>
+      <span class="logo" aria-label="Shape 28 graus">SHAPE<b>28</b><sup>°</sup></span>
+      <p class="offer-sub">Desafio de 28 dias de calistenia</p>
+      <ul class="offer-list">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>28 treinos de 15 minutos, em casa e sem equipamentos</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>O método 18° → 28°: 4 fases que esquentam semana a semana</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Área de membros no celular com seu termômetro de progresso</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>6 meses de acesso: dá pra repetir o ciclo até o verão</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Garantia incondicional de 7 dias</li>
+      </ul>
+      <div class="price"><sup>R$</sup>12</div>
+      <p class="price-sub">pagamento único · Pix ou cartão</p>
+      <a class="btn btn-block js-checkout" href="#oferta">
+        Começar meu Shape 28°
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+      <div class="bump"><span style="font-size:18px;line-height:1.1">★</span><span>No checkout você pode trocar pra <b>acesso vitalício</b> por só <b>+R$5</b> e ter o Shape 28° em todo verão.</span></div>
+      <div class="pay">
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>Compra segura</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg>Acesso imediato</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"/></svg>7 dias de garantia</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONSISTÊNCIA + GARANTIA ================= -->
+<section style="padding-top:0">
+  <div class="wrap truth">
+    <div class="truth-card y-card reveal">
+      <h3>Não é mágica.<br>É consistência.</h3>
+      <p>Ninguém muda o corpo em uma semana, e a gente não vai te prometer isso. O que o Shape 28° te dá é um plano simples pra você aparecer todo dia. Grau por grau.</p>
+    </div>
+    <div class="truth-card reveal">
+      <div class="seal"><div><b>7</b><small>DIAS</small></div></div>
+      <h3 style="font-size:30px">Teste por 7 dias. Risco zero.</h3>
+      <p>Entre, faça os primeiros treinos e sinta o método. Se em 7 dias achar que não é pra você, é só pedir o reembolso e devolvemos 100% do valor.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section style="padding-top:0">
+  <div class="wrap">
+    <span class="eyebrow reveal">Dúvidas</span>
+    <h2 class="h2 reveal">Perguntas frequentes</h2>
+    <div class="faq">
+      <details class="reveal"><summary>O que é calistenia?</summary><p>É o treino com o peso do próprio corpo: flexões, agachamentos, pranchas, afundos e variações. Por isso dá pra fazer em casa, sem nenhum equipamento.</p></details>
+      <details class="reveal"><summary>Nunca treinei. Consigo fazer?</summary><p>Consegue. A semana 1 (18°) é pra ligar o motor, com movimentos simples e variações mais fáceis. A temperatura sobe aos poucos, no seu ritmo.</p></details>
+      <details class="reveal"><summary>15 minutos por dia funciona mesmo?</summary><p>Funciona pra criar o hábito e evoluir com constância, que é o que mais pesa. Os resultados variam de pessoa pra pessoa e dependem também de alimentação e sono.</p></details>
+      <details class="reveal"><summary>Como recebo o acesso?</summary><p>Logo depois do pagamento você recebe no e-mail o link da área de membros. É só criar sua conta com o <b>mesmo e-mail da compra</b> e o acesso já aparece liberado. No Pix a liberação costuma ser na hora.</p></details>
+      <details class="reveal"><summary>Por quanto tempo tenho acesso?</summary><p>6 meses a partir da compra, tempo pra repetir o ciclo de 28 dias várias vezes antes do verão. No checkout dá pra trocar pra acesso vitalício por mais R$5.</p></details>
+      <details class="reveal"><summary>E se eu não gostar?</summary><p>Você tem 7 dias de garantia. É só pedir o reembolso e recebe o valor de volta.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FINAL ================= -->
+<section class="final">
+  <div class="final-img"><img src="img/por-do-sol.webp" alt="" loading="lazy" width="2000" height="1125"></div>
+  <div class="wrap">
+    <h2 class="h2 reveal">Quando os 28 graus chegarem, você não quer começar. <span class="y">Você quer estar pronto.</span></h2>
+    <p class="lead reveal">Não deixe pra dezembro aquilo que você pode começar <span id="mes">hoje</span>.</p>
+    <a class="btn js-checkout reveal" href="#oferta">
+      Esquentar agora
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span class="logo">SHAPE<b>28</b><sup>°</sup></span>
+    <p>© <span id="y"></span> Shape 28°. Todos os direitos reservados.</p>
+    <p>Imagens ilustrativas. Os resultados variam de pessoa pra pessoa. Este conteúdo não substitui orientação médica ou de um profissional de educação física. Se você tem alguma condição de saúde, consulte um médico antes de começar.</p>
+  </div>
+</footer>
+
+<!-- Barra fixa mobile -->
+<div class="sticky" id="sticky">
+  <div class="s-price"><small>Acesso completo</small><b>R$12</b></div>
+  <a class="btn js-checkout" href="#oferta">Esquentar agora</a>
+</div>
+
+<!-- ================= QUIZ (overlay) ================= -->
+<div class="quiz" id="quizBox" role="dialog" aria-modal="true" aria-label="Descubra seu ponto de partida">
+  <div class="quiz-top">
+    <span class="logo">SHAPE<b>28</b><sup>°</sup></span>
+    <div class="q-progress"><i id="qBar"></i></div>
+    <button class="q-close" type="button" id="qClose" aria-label="Fechar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+  </div>
+  <div class="quiz-body" id="qBody"></div>
+</div>
+
+<script>
+/* ---------- Checkout (mantém UTMs da URL) ---------- */
+function checkoutUrl(extra){
+  var url = window.CHECKOUT_URL || "";
+  if (!url || url.indexOf("SEU-LINK-AQUI") !== -1) return "#oferta";
+  try{
+    var u = new URL(url);
+    new URLSearchParams(location.search).forEach(function(v,k){ if(!u.searchParams.has(k)) u.searchParams.set(k,v); });
+    if (extra) Object.keys(extra).forEach(function(k){ u.searchParams.set(k, extra[k]); });
+    return u.toString();
+  }catch(e){ return url; }
+}
+document.querySelectorAll(".js-checkout").forEach(function(a){ a.href = checkoutUrl(); });
+
+/* ---------- Mês atual na frase final ---------- */
+(function(){
+  var m = ["janeiro","fevereiro","março","abril","maio","junho","julho","agosto","setembro","outubro","novembro","dezembro"][new Date().getMonth()];
+  var el = document.getElementById("mes");
+  if (el && m !== "dezembro") el.textContent = "em " + m;
+  document.getElementById("y").textContent = new Date().getFullYear();
+})();
+
+/* ---------- Contagem até o verão (21/12) ---------- */
+(function(){
+  var now = new Date(), y = now.getFullYear();
+  var start = new Date(y, 11, 21), end = new Date(y, 2, 20);
+  var inSummer = now >= start || now < end;
+  if (inSummer){
+    document.querySelectorAll(".js-summer").forEach(function(el){ el.textContent = "O verão chegou. Ainda dá tempo de esquentar"; });
+    document.querySelectorAll(".js-cycles-line").forEach(function(el){ el.textContent = "E cada ciclo de 28 dias te deixa mais pronto pro resto da temporada."; });
+    return;
+  }
+  var days = Math.ceil((start - now) / 864e5);
+  var weeks = Math.max(1, Math.floor(days / 7));
+  var cycles = Math.floor(days / 28);
+  document.querySelectorAll(".js-weeks").forEach(function(el){ el.textContent = weeks + (weeks === 1 ? " semana" : " semanas"); });
+  document.querySelectorAll(".js-cycles").forEach(function(el){
+    el.textContent = cycles >= 2 ? cycles + " ciclos" : (cycles === 1 ? "1 ciclo completo" : "o seu primeiro ciclo");
+  });
+})();
+
+/* ---------- Animação de entrada ---------- */
+(function(){
+  var els = document.querySelectorAll(".reveal");
+  if(!("IntersectionObserver" in window)){ els.forEach(function(el){el.classList.add("in")}); return; }
+  var io = new IntersectionObserver(function(en){
+    en.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target); } });
+  },{rootMargin:"0px 0px -8% 0px"});
+  els.forEach(function(el){ io.observe(el); });
+})();
+
+/* ---------- Termômetro que esquenta com a rolagem ---------- */
+(function(){
+  var sec = document.getElementById("jornada"), now = document.getElementById("thermoNow");
+  var stages = document.querySelectorAll(".stage");
+  if(!("IntersectionObserver" in window)) return;
+  var io = new IntersectionObserver(function(en){
+    en.forEach(function(e){
+      if(!e.isIntersecting) return;
+      var s = e.target;
+      sec.style.setProperty("--t-color", s.dataset.c);
+      sec.style.setProperty("--t-fill", s.dataset.f);
+      sec.style.setProperty("--stage-bg", s.dataset.bg);
+      now.textContent = s.dataset.t + "°";
+    });
+  },{rootMargin:"-45% 0px -45% 0px"});
+  stages.forEach(function(s){ io.observe(s); });
+})();
+
+/* ---------- Barra fixa (mobile) ---------- */
+(function(){
+  var s = document.getElementById("sticky"), hero = document.querySelector(".hero"), offer = document.getElementById("oferta");
+  if(!("IntersectionObserver" in window)){ s.classList.add("show"); return; }
+  var h = true, o = false;
+  function upd(){ s.classList.toggle("show", !h && !o); }
+  new IntersectionObserver(function(e){ h = e[0].isIntersecting; upd(); }).observe(hero);
+  new IntersectionObserver(function(e){ o = e[0].isIntersecting; upd(); },{threshold:.1}).observe(offer);
+})();
+
+/* =========================================================
+   QUIZ "DESCUBRA SEU PONTO DE PARTIDA" — edite textos aqui
+   ========================================================= */
+var QUIZ = [
+  { q:"Há quanto tempo você não treina?", key:"hist", opts:[
+    {t:"Nunca treinei de verdade", s:0},
+    {t:"Parei há mais de 6 meses", s:1},
+    {t:"Treino de vez em quando", s:2},
+    {t:"Treino com frequência", s:3} ]},
+  { q:"Quantas flexões seguidas você faz hoje?", key:"flex", opts:[
+    {t:"Nenhuma ou quase nenhuma", s:0},
+    {t:"Entre 5 e 15", s:1},
+    {t:"Entre 15 e 30", s:2},
+    {t:"Mais de 30", s:3} ]},
+  { q:"O que você quer ter quando chegar nos 28°?", key:"obj", opts:[
+    {t:"Menos barriga", v:"perder a barriga"},
+    {t:"Mais definição", v:"ganhar definição"},
+    {t:"Mais força", v:"ganhar força"},
+    {t:"O hábito de treinar", v:"criar o hábito de treinar"} ]},
+  { q:"Que horário fica melhor pra você?", key:"hora", opts:[
+    {t:"Logo cedo, antes do dia começar", v:"cedo"},
+    {t:"Na hora do almoço", v:"almoco"},
+    {t:"À noite", v:"noite"},
+    {t:"Varia muito", v:"varia"} ]},
+  { q:"O que mais te travou até hoje?", key:"trava", opts:[
+    {t:"Falta de tempo", v:"tempo"},
+    {t:"Começo e paro", v:"constancia"},
+    {t:"Não sabia o que fazer", v:"saber"},
+    {t:"Academia cara", v:"dinheiro"} ]}
+];
+
+/* adapt = estimativa de dias até o treino ficar natural */
+var LEVELS = [
+  { max:1, temp:18, color:"var(--cold)", name:"Ponto de partida: Frio", adapt:"10 a 14",
+    text:"Você está começando do zero, e isso é bom: o corpo responde rápido quando sai da inércia. Comece pelas <strong>variações mais fáceis</strong> e foque numa coisa só: não pular nenhum dia." },
+  { max:3, temp:20, color:"var(--mild)", name:"Ponto de partida: Morno", adapt:"7 a 10",
+    text:"Você já tem alguma base, só falta constância. Siga o plano desde o dia 1 sem pular etapas e <strong>aumente as repetições</strong> sempre que ficar fácil." },
+  { max:6, temp:22, color:"var(--warm)", name:"Ponto de partida: Aquecido", adapt:"4 a 6",
+    text:"Você já treina e aguenta um volume bom. Use as <strong>variações mais difíceis</strong> desde a primeira semana e reduza o descanso pra aproveitar bem os 15 minutos." }
+];
+var HORA = {
+  cedo:"Treine logo ao acordar, antes de pegar o celular. 15 minutos e o dia já começa ganho.",
+  almoco:"Separe 15 minutos antes de almoçar. É o horário mais fácil de proteger na rotina.",
+  noite:"Treine antes do banho da noite, pelo menos 1 hora antes de dormir.",
+  varia:"Escolha um gatilho fixo em vez de um horário, tipo \"depois do banho\" ou \"antes do jantar\"."
+};
+var TRAVA = {
+  tempo:"<b>Falta de tempo?</b>São 15 minutos. Menos que um episódio de série.",
+  constancia:"<b>Começa e para?</b>Marque cada dia concluído na área de membros e não deixe o termômetro esfriar.",
+  saber:"<b>Não sabia o que fazer?</b>O treino do dia já vem pronto. É só abrir e seguir.",
+  dinheiro:"<b>Academia cara?</b>R$12 uma vez, sem mensalidade e sem equipamento."
+};
+
+(function(){
+  var box = document.getElementById("quizBox"), body = document.getElementById("qBody"), bar = document.getElementById("qBar");
+  var step = 0, ans = {}, lastFocus = null;
+
+  function open(){
+    lastFocus = document.activeElement; step = 0; ans = {};
+    box.classList.add("open"); document.body.style.overflow = "hidden"; render();
+  }
+  function close(){
+    box.classList.remove("open"); document.body.style.overflow = "";
+    if (lastFocus) lastFocus.focus();
+  }
+  function render(){
+    bar.style.width = (step / QUIZ.length * 100) + "%";
+    if (step >= QUIZ.length) return loading();
+    var it = QUIZ[step];
+    var html = '<div class="q-anim"><div class="q-step">Pergunta ' + (step+1) + ' de ' + QUIZ.length + '</div>'
+      + '<h2 class="q-title">' + it.q + '</h2><div class="q-opts">';
+    it.opts.forEach(function(o,i){
+      var sel = ans[it.key] && ans[it.key].t === o.t ? " sel" : "";
+      html += '<button class="q-opt' + sel + '" type="button" data-i="' + i + '"><span class="k">' + "ABCD"[i] + '</span>' + o.t + '</button>';
+    });
+    html += '</div>' + (step > 0 ? '<button class="q-back" type="button">← Voltar</button>' : '') + '</div>';
+    body.innerHTML = html;
+    body.querySelectorAll(".q-opt").forEach(function(b){
+      b.addEventListener("click", function(){
+        b.classList.add("sel");
+        ans[it.key] = it.opts[+b.dataset.i];
+        setTimeout(function(){ step++; render(); }, 220);
+      });
+    });
+    var back = body.querySelector(".q-back");
+    if (back) back.addEventListener("click", function(){ step--; render(); });
+    var first = body.querySelector(".q-opt"); if (first) first.focus({preventScroll:true});
+    box.scrollTop = 0;
+  }
+  function loading(){
+    var t = 18;
+    body.innerHTML = '<div class="q-loading q-anim"><div class="big" id="qT">18°</div><p>Medindo sua temperatura…</p></div>';
+    var el = document.getElementById("qT");
+    var iv = setInterval(function(){ t++; el.textContent = t + "°"; if (t >= 28){ clearInterval(iv); setTimeout(result, 350); } }, 90);
+  }
+  function result(){
+    var score = (ans.hist ? ans.hist.s : 0) + (ans.flex ? ans.flex.s : 0);
+    var lv = LEVELS.filter(function(l){ return score <= l.max; })[0] || LEVELS[LEVELS.length-1];
+    var url = checkoutUrl({ utm_content: "quiz-" + lv.temp });
+    body.innerHTML = '<div class="q-anim">'
+      + '<div class="q-step">Sua temperatura hoje</div>'
+      + '<div class="r-head"><span class="r-deg" style="color:' + lv.color + '">' + lv.temp + '°</span><span class="r-arrow">→</span><span class="r-goal">28°</span></div>'
+      + '<span class="r-level">' + lv.name + '</span>'
+      + '<div class="r-adapt"><b>' + lv.adapt + '</b><span><strong>dias pro seu corpo pegar o ritmo</strong>É quando o treino de 15 minutos deixa de ser estranho e vira rotina.</span></div>'
+      + '<p class="r-note">Estimativa baseada nas suas respostas. Cada corpo tem seu tempo.</p>'
+      + '<p class="r-text">Seu objetivo é <strong>' + (ans.obj ? ans.obj.v : "evoluir") + '</strong>. ' + lv.text + '</p>'
+      + '<ul class="r-list">'
+      + '<li><span class="n">1</span><div><b>Seu horário</b>' + HORA[ans.hora ? ans.hora.v : "varia"] + '</div></li>'
+      + '<li><span class="n">2</span><div>' + TRAVA[ans.trava ? ans.trava.v : "tempo"] + '</div></li>'
+      + '<li><span class="n">3</span><div><b>Sua meta</b>Completar os 28 dias e chegar nos 28°. Depois, repetir o ciclo e entrar no verão 56 ou 84 dias na frente.</div></li>'
+      + '</ul>'
+      + '<a class="btn btn-block" href="' + url + '" id="qBuy">Começar meu Shape 28° agora<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>'
+      + '<p class="r-price">R$12 · pagamento único · 7 dias de garantia</p>'
+      + '<button class="q-back" type="button" id="qRedo">Refazer o diagnóstico</button>'
+      + '</div>';
+    bar.style.width = "100%";
+    document.getElementById("qRedo").addEventListener("click", function(){ step = 0; ans = {}; render(); });
+    document.getElementById("qBuy").addEventListener("click", function(e){
+      if (this.getAttribute("href") === "#oferta"){ e.preventDefault(); close(); location.hash = "oferta"; }
+    });
+    box.scrollTop = 0;
+  }
+
+  document.querySelectorAll(".js-quiz").forEach(function(b){ b.addEventListener("click", open); });
+  document.getElementById("qClose").addEventListener("click", close);
+  document.addEventListener("keydown", function(e){ if (e.key === "Escape" && box.classList.contains("open")) close(); });
+  if (location.hash === "#diagnostico") open();
+})();
+</script>
+</body>
+</html>
