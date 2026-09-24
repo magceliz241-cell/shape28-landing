@@ -408,11 +408,124 @@
     .final .h2{margin:0;max-width:15ch}
     .final .lead{margin-left:0}
   }
+
+  /* ================= v2: MÉTODO + JORNADA ================= */
+  .hero .lead-2{margin-top:10px;font-family:"Archivo";font-style:italic;font-weight:800;font-size:20px;line-height:1.25;color:var(--text)}
+  .hero .lead-2 span{color:var(--yellow)}
+
+  /* Caminho personalizado (aparece depois do quiz) */
+  .path{display:none;max-width:var(--wrap);margin:18px auto 0;padding:0 16px}
+  .path.show{display:block}
+  .path-card{display:flex;gap:14px;align-items:center;background:var(--ink-2);border:1px solid rgba(255,229,0,.3);border-radius:16px;padding:14px 16px}
+  .path-card .t{font-family:"Archivo";font-weight:900;font-style:italic;font-size:34px;line-height:1;flex:none}
+  .path-card p{font-size:14.5px;color:var(--text-2);line-height:1.4}
+  .path-card p b{color:var(--text);display:block;font-size:15px}
+  .path-card button{margin-left:auto;flex:none;background:none;border:0;color:var(--text-3);font:600 13px "Inter";cursor:pointer;text-decoration:underline}
+
+  /* Problema: frases de contraste */
+  .contrast{display:grid;gap:8px;margin-top:24px}
+  .contrast p{margin:0!important;font-size:17px!important}
+  .contrast p b{color:var(--text)}
+
+  /* Estágios do método */
+  .stage-tag{display:inline-block;font-family:"Archivo";font-weight:900;font-style:italic;font-size:15px;letter-spacing:.06em;text-transform:uppercase;padding:4px 10px;border-radius:8px;background:rgba(255,255,255,.08);margin-bottom:6px}
+  .s18 .stage-tag{color:var(--cold)} .s22 .stage-tag{color:var(--mild)} .s25 .stage-tag{color:var(--warm)} .s28 .stage-tag{color:var(--yellow)}
+  .steps-line{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:28px;max-width:640px}
+  .steps-line div{border-radius:14px;padding:14px 10px;background:var(--ink-2);border:1px solid var(--line);text-align:center}
+  .steps-line b{display:block;font-family:"Archivo";font-weight:900;font-style:italic;font-size:30px;line-height:1}
+  .steps-line span{display:block;font-size:11.5px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--text-2);margin-top:6px}
+  .steps-line div:nth-child(1) b{color:var(--cold)} .steps-line div:nth-child(2) b{color:var(--mild)}
+  .steps-line div:nth-child(3) b{color:var(--warm)} .steps-line div:nth-child(4) b{color:var(--yellow)}
+  .no-skip{margin-top:44px;font-family:"Archivo";font-weight:900;font-style:italic;text-transform:uppercase;font-size:clamp(26px,4.4vw,40px);line-height:1.02;max-width:20ch}
+  .no-skip span{color:var(--yellow)}
+
+  /* Benefícios */
+  .ben-grid{display:grid;gap:12px;margin-top:40px}
+  .ben{background:var(--ink-2);border:1px solid var(--line);border-radius:var(--radius);padding:22px}
+  .ben .k{font-family:"Archivo";font-weight:900;font-style:italic;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--yellow)}
+  .ben h3{font-size:22px;font-weight:900;font-style:italic;font-stretch:90%;text-transform:uppercase;line-height:1.05;margin:8px 0 6px}
+  .ben p{color:var(--text-2);font-size:15.5px}
+  .ben-note{font-size:13px;color:var(--text-3);margin-top:16px;max-width:70ch}
+
+  /* Plataforma (prints) */
+  .app-sec{overflow:hidden}
+  .app-words{display:grid;gap:4px;margin-top:22px;font-family:"Archivo";font-weight:900;font-style:italic;text-transform:uppercase;font-size:clamp(24px,4vw,34px);line-height:1.05}
+  .app-words span:nth-child(odd){color:var(--text)} .app-words span:nth-child(even){color:var(--yellow)}
+  .phones{display:flex;gap:14px;margin-top:40px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 16px 18px;margin-left:-16px;margin-right:-16px;scrollbar-width:none}
+  .phones::-webkit-scrollbar{display:none}
+  .phone{flex:none;width:236px;scroll-snap-align:start;scroll-margin-left:16px}
+  .phone .frame{border-radius:34px;padding:8px;background:linear-gradient(160deg,#2A2A2E,#141416);border:1px solid rgba(255,255,255,.14);box-shadow:0 30px 60px -30px rgba(0,0,0,.8),0 0 0 1px rgba(0,0,0,.4) inset}
+  .phone img{width:100%;height:auto;aspect-ratio:390/844;object-fit:cover;object-position:top;border-radius:27px;background:var(--ink-3)}
+  .phone p{font-size:14px;color:var(--text-2);margin-top:12px;text-align:center}
+  .phone p b{color:var(--text);display:block;font-size:15px}
+  .app-steps{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+  .app-steps span{font-family:"Archivo";font-weight:900;font-style:italic;text-transform:uppercase;font-size:15px;padding:9px 14px;border-radius:99px;background:rgba(255,229,0,.1);color:var(--yellow);border:1px solid rgba(255,229,0,.3)}
+
+  /* Escada: Comece → Continue → Vá além */
+  .ladder{display:grid;gap:16px;margin-top:44px;position:relative}
+  .rung{background:var(--ink-2);border:1px solid var(--line);border-radius:26px;padding:28px 22px 24px;position:relative;display:flex;flex-direction:column}
+  .rung .num{font-family:"Archivo";font-weight:900;font-style:italic;font-size:14px;letter-spacing:.14em;color:var(--text-3)}
+  .rung .kick{font-family:"Archivo";font-weight:900;font-style:italic;text-transform:uppercase;font-size:clamp(22px,3.4vw,28px);line-height:1.02;margin:6px 0 14px}
+  .rung .prod{display:inline-flex;align-items:center;gap:8px;font-family:"Archivo";font-weight:900;font-style:italic;text-transform:uppercase;font-size:14px;letter-spacing:.06em;color:var(--black);background:var(--text);padding:5px 10px;border-radius:8px;align-self:flex-start}
+  .rung .msg{color:var(--text-2);font-size:16px;margin-top:14px}
+  .rung .msg strong{color:var(--text)}
+  .rung ul{list-style:none;display:grid;gap:9px;margin:18px 0 20px}
+  .rung li{position:relative;padding-left:28px;font-size:15px;color:var(--text-2);line-height:1.4}
+  .rung li b{color:var(--text)}
+  .rung li::before{content:"";position:absolute;left:0;top:2px;width:18px;height:18px;border-radius:5px;background:rgba(255,229,0,.14) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23FFE500' stroke-width='3.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12l5 5 9-10'/%3E%3C/svg%3E") center/12px no-repeat}
+  .rung .pr{margin-top:auto;display:flex;align-items:baseline;gap:8px}
+  .rung .pr b{font-family:"Archivo";font-weight:900;font-style:italic;font-size:48px;line-height:1;letter-spacing:-.03em}
+  .rung .pr b sup{font-size:.4em;vertical-align:top;position:relative;top:.35em;margin-right:3px}
+  .rung .pr small{font-size:13px;color:var(--text-3);line-height:1.3}
+  .rung .btn{margin-top:16px}
+  .rung.r2{border-color:rgba(255,229,0,.35)}
+  .rung.r3{background:linear-gradient(160deg,#1E1C0C,#141416 60%);border:1.5px solid var(--yellow);box-shadow:0 30px 70px -40px rgba(255,229,0,.55)}
+  .rung .badge{position:absolute;top:-13px;right:20px;background:var(--yellow);color:var(--black);font-family:"Archivo";font-weight:800;font-size:11.5px;letter-spacing:.08em;padding:6px 12px;border-radius:99px;text-transform:uppercase}
+  .rung .btn-ghost{backdrop-filter:none;-webkit-backdrop-filter:none}
+  .ladder-note{text-align:center;color:var(--text-2);font-size:15px;margin:22px auto 0;max-width:52ch}
+  .ladder-note b{color:var(--text)}
+  .guar-row{display:flex;justify-content:center;gap:16px;flex-wrap:wrap;margin-top:16px;font-size:13px;color:var(--text-3);font-weight:600}
+  .guar-row span{display:inline-flex;align-items:center;gap:6px}
+  .guar-row svg{width:15px;height:15px;color:var(--yellow)}
+  .cycle{margin-top:0;padding-bottom:0!important}
+  .cycle .h2{max-width:18ch}
+
+  /* ================= QUIZ v2 ================= */
+  .q-progress{height:5px}
+  .q-intro{text-align:center;padding-top:6vh;max-width:560px;margin:0 auto}
+  .q-intro .mini-thermo{height:110px;max-width:260px;margin:0 auto 26px;padding-top:24px}
+  .q-intro h1{font-family:"Archivo";font-weight:900;font-style:italic;font-stretch:88%;text-transform:uppercase;font-size:clamp(38px,9vw,64px);line-height:.95;letter-spacing:-.01em}
+  .q-intro p{color:var(--text-2);font-size:18px;margin:16px auto 0;max-width:36ch}
+  .q-intro .btn{margin-top:30px;min-width:min(100%,340px)}
+  .q-intro .fine{margin-top:14px}
+  .q-skip{display:inline-block;margin-top:22px;background:none;border:0;color:var(--text-3);font:600 14px "Inter";cursor:pointer;text-decoration:underline}
+  .q-opt .k{font-size:12px}
+  .r-title{font-family:"Archivo";font-weight:900;font-style:italic;font-stretch:88%;text-transform:uppercase;font-size:clamp(32px,7.4vw,50px);line-height:.98;margin:8px 0 16px}
+  .r-mini{display:flex;align-items:center;gap:10px;margin-bottom:6px}
+  .r-mini b{font-family:"Archivo";font-weight:900;font-style:italic;font-size:30px;line-height:1}
+  .r-mini i{font-style:normal;color:var(--text-3);font-weight:800}
+  .r-mini span{font-size:12.5px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--text-3)}
+  .r-text p{margin-top:12px}
+  .r-rec{margin:22px 0 8px;border-radius:18px;padding:20px 18px;background:var(--yellow);color:var(--black)}
+  .r-rec small{display:block;font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;opacity:.75}
+  .r-rec p{font-size:16.5px;margin-top:6px;color:#2A2A20}
+  .r-rec .r-four{font-family:"Archivo";font-weight:900;font-style:italic;text-transform:uppercase;font-size:21px;line-height:1.15;margin-top:12px;color:var(--black)}
+  .r-alt{display:block;text-align:center;margin-top:12px;color:var(--text-2);font-weight:600;font-size:15px}
+
+  @media (min-width:760px){
+    .ben-grid{grid-template-columns:repeat(3,1fr)}
+    .ladder{grid-template-columns:repeat(3,1fr);align-items:stretch}
+    .phones{justify-content:center;overflow:visible;margin:40px 0 0;padding:0}
+    .phone:nth-child(2),.phone:nth-child(4){transform:translateY(-26px)}
+    .phone{width:230px}
+    .path{padding:0 16px}
+  }
+  .hero h1{font-size:clamp(40px,9.4vw,84px);max-width:14ch}
 </style>
 </head>
 <body>
 
-<div class="topbar"><span class="js-summer">Faltam <b class="js-weeks">poucas semanas</b> pro verão</span> · Acesso por R$12</div>
+<div class="topbar"><span class="js-summer">Faltam <b class="js-weeks">poucas semanas</b> pro verão</span> · Primeiro ciclo por R$9,90</div>
 
 <!-- ================= HERO ================= -->
 <header class="hero">
@@ -423,28 +536,37 @@
   <div class="hero-top">
     <div class="wrap">
       <span class="logo" aria-label="Shape 28 graus">SHAPE<b>28</b><sup>°</sup></span>
-      <span class="temp-pill"><i></i>Corpo parado: <b>18°</b></span>
+      <span class="temp-pill"><i></i><span class="js-pill">Ponto de partida:</span> <b class="js-pill-t">18°</b></span>
     </div>
   </div>
   <div class="wrap">
-    <h1>Quando o verão chegar, você vai querer estar nos <span class="y">28°</span>.</h1>
-    <p class="lead">Parado, seu corpo está em 18°. Em 28 dias de calistenia, 15 minutos por dia em casa, você leva ele aos 28°: aquecido, no ritmo e pronto antes de todo mundo.</p>
+    <h1>Seu corpo tem mais potencial do que <span class="y">você imagina.</span></h1>
+    <p class="lead">O Shape 28° é um método de 28 dias criado para transformar o exercício em uma rotina simples, progressiva e possível de manter.</p>
     <div class="chips">
-      <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2 2M9 2h6"/></svg>15 min por dia</span>
-      <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg>Em casa</span>
-      <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M6 6l12 12"/></svg>Sem equipamentos</span>
-      <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Sem mensalidade</span>
+      <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2 2M9 2h6"/></svg>15 minutos por dia</span>
+      <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg>Sem precisar começar na academia</span>
+      <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M6 6l12 12"/></svg>Sem equipamentos caros</span>
+      <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Sem precisar estar em forma</span>
     </div>
-    <div class="hero-cta">
-      <button class="btn js-quiz" type="button">
-        Descobrir meu ponto de partida
+    <p class="lead-2">Você começa de onde está.<br><span>E evolui a partir daí.</span></p>
+    <div class="hero-cta" style="margin-top:24px">
+      <a class="btn" href="#oferta">
+        Começar meu Shape 28°
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-      </button>
-      <a class="btn btn-ghost js-checkout" href="#oferta">Ver a oferta</a>
-      <p class="fine">Em 1 minuto: sua temperatura hoje e quantos dias seu corpo leva pra pegar o ritmo.</p>
+      </a>
+      <button class="btn btn-ghost js-quiz" type="button">Descobrir meu caminho</button>
     </div>
   </div>
 </header>
+
+<!-- Caminho personalizado (preenchido depois do quiz) -->
+<div class="path" id="path" aria-live="polite">
+  <div class="path-card">
+    <span class="t js-path-t">18°</span>
+    <p><b class="js-path-title">Seu caminho</b><span class="js-path-sub"></span></p>
+    <button type="button" class="js-quiz">Refazer</button>
+  </div>
+</div>
 
 <!-- ================= PROBLEMA ================= -->
 <section>
@@ -454,22 +576,31 @@
       <span class="deg">18°</span>
     </div>
     <div class="problem-text">
-      <span class="eyebrow reveal">Corpo parado: 18°</span>
-      <h2 class="h2 reveal">Todo ano o verão chega. <span class="y">E todo ano pega muita gente parada.</span></h2>
-      <p class="reveal">É sempre igual: dezembro chega, vêm as férias, o réveillon, a praia, e bate aquele <strong>“devia ter começado antes”</strong>. Aí vem a correria de última hora, que quase nunca dá certo.</p>
-      <p class="reveal">O shape de verão não se constrói no verão. <strong>Ele se constrói antes</strong>, enquanto ninguém está olhando.</p>
-      <p class="quote reveal">Por isso existe o Shape 28°: pra você esquentar o corpo enquanto os outros ainda esperam.</p>
+      <span class="eyebrow reveal">O que realmente trava</span>
+      <h2 class="h2 reveal">O problema não é <span class="y">falta de vontade.</span></h2>
+      <p class="reveal">Você provavelmente já sabe que deveria treinar. O problema é saber <strong>por onde começar, o que fazer e como continuar evoluindo.</strong></p>
+      <div class="contrast reveal">
+        <p>É fácil treinar dois dias. <b>Difícil é saber o que fazer no terceiro.</b></p>
+        <p>É fácil começar motivado. <b>Difícil é manter quando você não sabe se está realmente evoluindo.</b></p>
+      </div>
+      <p class="quote reveal">O Shape 28° resolve exatamente essa parte.</p>
     </div>
   </div>
 </section>
 
-<!-- ================= JORNADA 18° → 28° ================= -->
+<!-- ================= MÉTODO 18° → 28° ================= -->
 <section class="journey" id="jornada">
   <div class="wrap">
     <div class="journey-head">
       <span class="eyebrow reveal">O método 18° → 28°</span>
-      <h2 class="h2 reveal">Cada semana, <span class="y">o termômetro sobe.</span></h2>
-      <p class="lead reveal">Os 28 dias são divididos em 4 temperaturas. Você começa na temperatura em que seu corpo está hoje e esquenta um pouco a cada semana até chegar nos 28°.</p>
+      <h2 class="h2 reveal">Cada grau é um <span class="y">novo estágio</span> da sua evolução.</h2>
+      <p class="lead reveal">Você recebe uma sequência estruturada de treinos que acompanha seu progresso ao longo dos 28 dias. <strong>Um treino leva ao próximo. Uma fase prepara você para a seguinte.</strong> E cada evolução prepara seu corpo para um desafio maior.</p>
+      <div class="steps-line reveal" aria-label="As 4 fases do método">
+        <div><b>18°</b><span>Comece</span></div>
+        <div><b>22°</b><span>Adapte</span></div>
+        <div><b>25°</b><span>Evolua</span></div>
+        <div><b>28°</b><span>Consolide</span></div>
+      </div>
     </div>
 
     <div class="journey-grid">
@@ -483,145 +614,162 @@
         <article class="stage s18 reveal" data-t="18" data-c="var(--cold)" data-f="25%" data-bg="#0D1218">
           <div class="blend fade-b"><img src="img/18-prancha.webp" alt="Homem de moletom fazendo prancha no quarto numa manhã fria" loading="lazy" width="900" height="1200"><span class="deg">18°</span></div>
           <div class="stage-body">
-            <span class="stage-week">Semana 1 · Ligar o motor</span>
-            <h3>Corpo frio.</h3>
-            <p>Seu corpo ainda está parado. Movimentos base da calistenia, execução certa e o compromisso mais importante do desafio: aparecer 15 minutos por dia.</p>
+            <span class="stage-week">Semana 1</span>
+            <h3><span class="stage-tag">Comece</span><br>Tire o corpo da inércia.</h3>
+            <p>Movimentos base, execução certa e as variações que você já consegue controlar. O único compromisso desta fase é aparecer todos os dias.</p>
             <div class="bar"><i></i></div>
           </div>
         </article>
         <article class="stage s22 reveal" data-t="22" data-c="var(--mild)" data-f="50%" data-bg="#101411">
           <div class="blend fade-b"><img src="img/22-casa.webp" alt="Homem fazendo agachamento no quarto pela manhã" loading="lazy" width="900" height="1200"><span class="deg">22°</span></div>
           <div class="stage-body">
-            <span class="stage-week">Semana 2 · Pegar o ritmo</span>
-            <h3>Você já começou.</h3>
-            <p>O corpo para de estranhar. Mais repetições, menos descanso, e o treino deixa de ser esforço pra virar parte do seu dia.</p>
+            <span class="stage-week">Semana 2</span>
+            <h3><span class="stage-tag">Adapte</span><br>O corpo para de estranhar.</h3>
+            <p>Mais repetições, menos descanso e a técnica ficando automática. O treino deixa de ser um esforço e começa a virar parte do seu dia.</p>
             <div class="bar"><i></i></div>
           </div>
         </article>
         <article class="stage s25 reveal" data-t="25" data-c="var(--warm)" data-f="75%" data-bg="#17100B">
           <div class="blend fade-b"><img src="img/25-banco.webp" alt="Homem fazendo flexão inclinada num banco da orla ao pôr do sol" loading="lazy" width="900" height="1200"><span class="deg">25°</span></div>
           <div class="stage-body">
-            <span class="stage-week">Semana 3 · Esquentar</span>
-            <h3>O verão está chegando.</h3>
-            <p>Aqui o treino esquenta de verdade: variações mais difíceis e circuitos mais intensos. É quando você começa a sentir mais força e firmeza.</p>
+            <span class="stage-week">Semana 3</span>
+            <h3><span class="stage-tag">Evolua</span><br>O desafio aumenta.</h3>
+            <p>Variações mais difíceis e treinos mais densos. É a fase em que você sente a diferença: mais força, mais firmeza, mais fôlego.</p>
             <div class="bar"><i></i></div>
           </div>
         </article>
         <article class="stage s28 reveal" data-t="28" data-c="var(--yellow)" data-f="100%" data-bg="#16150A">
           <div class="blend fade-b"><img src="img/28-praia.webp" alt="Homem sem camisa caminhando em direção ao mar num dia de sol" loading="lazy" width="900" height="1200"><span class="deg">28°</span></div>
           <div class="stage-body">
-            <span class="stage-week">Semana 4 · Pronto</span>
-            <h3>Você está pronto.</h3>
-            <p>Enquanto os outros começam do zero, você fecha o ciclo com uma rotina que já é sua. E pode repetir pra entrar no verão ainda mais na frente.</p>
+            <span class="stage-week">Semana 4</span>
+            <h3><span class="stage-tag">Consolide</span><br>A rotina agora é sua.</h3>
+            <p>Você repete os testes do primeiro dia e mede o quanto evoluiu. O que parecia difícil no começo agora faz parte de você.</p>
             <div class="bar"><i></i></div>
           </div>
         </article>
       </div>
     </div>
+    <p class="no-skip reveal">Você não pula etapas.<br><span>Você evolui através delas.</span></p>
   </div>
 </section>
 
-<!-- ================= O QUE É ================= -->
+<!-- ================= O QUE MUDA ================= -->
 <section>
   <div class="wrap">
-    <span class="eyebrow reveal">O que você precisa</span>
-    <h2 class="h2 reveal">Só do seu <span class="y">corpo</span> e da sua <span class="y">disposição.</span></h2>
-    <div class="what-grid">
-      <div class="feat reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2 2M9 2h6"/></svg></div><div><h3>15 minutos por dia</h3><p>Menos que um episódio de série. Cabe em qualquer rotina.</p></div></div>
-      <div class="feat reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg></div><div><h3>Em casa</h3><p>Quarto, sala ou quintal. Sem trânsito e sem fila de aparelho.</p></div></div>
-      <div class="feat reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M6 6l12 12"/></svg></div><div><h3>Sem equipamentos</h3><p>Calistenia usa o peso do seu corpo. Só isso.</p></div></div>
-      <div class="feat reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div><div><h3>Sem mensalidade</h3><p>R$12 uma vez. Sem boleto de academia todo mês.</p></div></div>
-      <div class="feat reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20V10M18 20V4M6 20v-4"/></svg></div><div><h3>Da sua temperatura</h3><p>Você começa de onde está e esquenta no seu ritmo.</p></div></div>
-      <div class="feat reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M11 18h2"/></svg></div><div><h3>No seu celular</h3><p>Abre, vê o treino do dia e faz. Seu progresso fica salvo.</p></div></div>
+    <span class="eyebrow reveal">O que a calistenia faz por você</span>
+    <h2 class="h2 reveal">Em 28 dias, você <span class="y">já se sente diferente.</span></h2>
+    <p class="lead reveal">A calistenia é treino de força com o peso do próprio corpo. Feita com constância e progressão, ela mexe em muito mais do que o espelho mostra.</p>
+    <div class="ben-grid">
+      <div class="ben reveal"><span class="k">Força</span><h3>Mais força no dia a dia</h3><p>Carregar, subir escada, levantar do chão. Você sente o corpo responder melhor já nas primeiras semanas.</p></div>
+      <div class="ben reveal"><span class="k">Disposição</span><h3>Mais energia</h3><p>Treinar com regularidade melhora o fôlego, o sono e a disposição pra encarar o dia.</p></div>
+      <div class="ben reveal"><span class="k">Autoestima</span><h3>Orgulho de você</h3><p>Cumprir o que você se propôs, dia após dia, muda a forma como você se enxerga.</p></div>
+      <div class="ben reveal"><span class="k">Corpo</span><h3>Base pra massa e definição</h3><p>Força e constância são o começo de qualquer objetivo: ganhar massa, perder gordura ou definir.</p></div>
+      <div class="ben reveal"><span class="k">Rotina</span><h3>Um hábito que fica</h3><p>Treinos curtos e progressivos são mais fáceis de manter. E o que você mantém é o que transforma.</p></div>
+      <div class="ben reveal"><span class="k">Economia</span><h3>Sem mensalidade</h3><p>Em casa, sem equipamentos caros e sem boleto de academia todo mês.</p></div>
     </div>
+    <p class="ben-note reveal">Os resultados variam de pessoa pra pessoa e dependem também de alimentação, sono e constância.</p>
   </div>
 </section>
 
-<!-- ================= NA FRENTE ================= -->
-<section style="padding-top:0">
+<!-- ================= PLATAFORMA ================= -->
+<section class="app-sec" style="padding-top:0">
   <div class="wrap">
-    <span class="eyebrow reveal">Enquanto todo mundo espera o verão chegar</span>
-    <h2 class="h2 reveal">Você pode começar <span class="y">agora.</span></h2>
-    <p class="lead reveal">Quando o verão chegar e todo mundo correr atrás do prejuízo, <strong>você já vai estar na frente.</strong> <span class="js-cycles-line">Até o verão dá tempo de fazer <strong class="js-cycles">vários ciclos</strong> do Shape 28°.</span></p>
-    <div class="ahead-nums">
-      <div class="num-card reveal"><b>28</b><span>dias na frente</span></div>
-      <div class="num-card reveal"><b>56</b><span>dias na frente</span></div>
-      <div class="num-card reveal"><b>84</b><span>dias na frente</span></div>
+    <span class="eyebrow reveal">Onde o método acontece</span>
+    <h2 class="h2 reveal">Tudo o que você precisa, <span class="y">no seu ritmo.</span></h2>
+    <div class="app-words reveal"><span>Seu próximo treino.</span><span>Sua evolução.</span><span>Seu progresso.</span><span>Sua sequência.</span></div>
+    <p class="lead reveal">Tudo organizado em um único lugar para que você não precise perder tempo pensando no que fazer.</p>
+    <div class="phones reveal">
+      <figure class="phone"><div class="frame"><img src="img/app-inicio.webp" alt="Tela inicial com o termômetro de progresso e o treino do dia" loading="lazy" width="390" height="844"></div><p><b>Seu termômetro</b>Veja em que grau você está e o próximo passo.</p></figure>
+      <figure class="phone"><div class="frame"><img src="img/app-treino.webp" alt="Tela de um dia de treino com os exercícios e as repetições" loading="lazy" width="390" height="844"></div><p><b>O treino do dia</b>Exercícios, repetições e demonstração de cada movimento.</p></figure>
+      <figure class="phone"><div class="frame"><img src="img/app-progresso.webp" alt="Tela de progresso com dias concluídos e testes" loading="lazy" width="390" height="844"></div><p><b>Sua evolução</b>Dias concluídos, sequência e testes pra medir o quanto você avançou.</p></figure>
+      <figure class="phone"><div class="frame"><img src="img/app-academia.webp" alt="Área Premium com treinos de academia por objetivo e semana" loading="lazy" width="390" height="844"></div><p><b>Premium: academia</b>Treinos direcionados ao seu objetivo, semana a semana.</p></figure>
     </div>
+    <div class="app-steps reveal"><span>Abra.</span><span>Treine.</span><span>Marque como concluído.</span><span>Avance.</span></div>
   </div>
 </section>
 
-<!-- ================= QUIZ CTA ================= -->
-<section style="padding-top:0" id="quiz">
+<!-- ================= PRIMEIRO CICLO ================= -->
+<section class="cycle" style="padding-top:0">
   <div class="wrap">
-    <div class="quiz-cta reveal">
-      <div>
-        <span class="eyebrow">Diagnóstico gratuito · 1 minuto</span>
-        <h2 class="h2">Descubra seu <span class="y">ponto de partida.</span></h2>
-        <p class="lead">Responda 5 perguntas rápidas e veja:</p>
-        <ul class="quiz-points">
-          <li><i style="background:var(--cold)">1</i><span><b>Sua temperatura hoje</b>, de 18° a 22°</span></li>
-          <li><i style="background:var(--warm)">2</i><span><b>Quantos dias seu corpo leva</b> pra se acostumar com o treino</span></li>
-          <li><i style="background:var(--yellow)">3</i><span><b>Por onde começar</b> e o melhor horário pra você</span></li>
+    <span class="eyebrow reveal">Comece → Continue → Vá além</span>
+    <h2 class="h2 reveal">28 dias não são o fim. <span class="y">São o primeiro ciclo.</span></h2>
+    <p class="lead reveal">28 dias podem ser o começo de uma mudança. <span class="js-cycles-line">E até o verão dá tempo de fazer <strong class="js-cycles">vários ciclos</strong>.</span></p>
+  </div>
+</section>
+
+<!-- ================= OFERTA: A JORNADA ================= -->
+<section id="oferta" class="offer-sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="ladder">
+      <article class="rung r1 reveal">
+        <span class="num">01 · COMECE</span>
+        <h3 class="kick">Primeiro, você começa.</h3>
+        <span class="prod">Shape 28°</span>
+        <p class="msg">Você não precisa mudar tudo hoje. <strong>Só precisa começar.</strong> Você segue o primeiro ciclo do método e constrói sua base.</p>
+        <ul>
+          <li><b>28 dias</b> de treinos progressivos, em casa</li>
+          <li>O método <b>18° → 28°</b> em 4 fases</li>
+          <li>Demonstração de cada exercício</li>
+          <li>Seu progresso salvo na sua conta</li>
+          <li>6 meses de acesso</li>
         </ul>
-        <button class="btn js-quiz" type="button" style="margin-top:28px">
-          Descobrir meu ponto de partida
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-        </button>
-      </div>
-      <div class="mini-thermo" aria-hidden="true"><i data-t="18°"></i><i data-t="22°"></i><i data-t="25°"></i><i data-t="28°"></i></div>
+        <div class="pr"><b><sup>R$</sup>9,90</b><small>pagamento<br>único</small></div>
+        <a class="btn btn-block btn-ghost js-checkout" href="#oferta" data-tier="comece">Começar meu Shape 28°</a>
+      </article>
+
+      <article class="rung r2 reveal">
+        <span class="num">02 · CONTINUE</span>
+        <h3 class="kick">Depois, você continua.</h3>
+        <span class="prod">Shape 28° Vitalício</span>
+        <p class="msg">Você começou. Seu corpo já respondeu. <strong>Por que parar nos 28 dias?</strong> Tenha o método pra continuar treinando e evoluindo pelo tempo que quiser.</p>
+        <ul>
+          <li>Tudo do Shape 28°</li>
+          <li><b>Acesso vitalício</b>: repita os ciclos quando quiser</li>
+          <li>Seu histórico de evolução sempre com você</li>
+        </ul>
+        <div class="pr"><b><sup>R$</sup>19,90</b><small>pagamento<br>único</small></div>
+        <a class="btn btn-block js-checkout" href="#oferta" data-tier="continue">Quero o vitalício</a>
+      </article>
+
+      <article class="rung r3 reveal">
+        <span class="badge">A jornada completa</span>
+        <span class="num">03 · VÁ ALÉM</span>
+        <h3 class="kick">E então, você quer ir além.</h3>
+        <span class="prod">Shape 28° Premium</span>
+        <p class="msg">Você começou com seu próprio corpo. <strong>Agora pode levar sua evolução pra outro nível.</strong> Mais massa, mais força, mais definição: quando o objetivo muda, o treino evolui junto.</p>
+        <ul>
+          <li>Tudo do Shape 28°, com <b>acesso vitalício</b></li>
+          <li><b>Área Premium</b> dentro da sua conta</li>
+          <li>Treinos de <b>academia</b> com demonstração</li>
+          <li>Treinamento <b>direcionado ao seu objetivo</b>: massa, força, definição ou condicionamento</li>
+        </ul>
+        <div class="pr"><b><sup>R$</sup>39,90</b><small>pagamento<br>único</small></div>
+        <a class="btn btn-block js-checkout" href="#oferta" data-tier="premium">Quero ir além</a>
+      </article>
+    </div>
+    <p class="ladder-note reveal">Você escolhe no checkout. <b>Você não começa de novo: leva tudo o que construiu pro próximo nível.</b></p>
+    <div class="guar-row">
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>Compra segura</span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg>Acesso imediato</span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"/></svg>7 dias de garantia</span>
+      <span>Pix ou cartão</span>
     </div>
   </div>
 </section>
 
-<!-- ================= OFERTA ================= -->
-<section id="oferta" class="offer-sec">
-  <div class="offer-bg" aria-hidden="true"><img src="img/28-praia.webp" alt="" loading="lazy" width="900" height="1200"></div>
-  <div class="wrap">
-    <div style="text-align:center">
-      <span class="eyebrow reveal">Oferta de lançamento</span>
-      <h2 class="h2 reveal" style="margin:0 auto">Menos que um lanche <span class="y">pra chegar pronto nos 28°.</span></h2>
-    </div>
-    <div class="offer reveal">
-      <span class="offer-tag">ACESSO COMPLETO</span>
-      <span class="logo" aria-label="Shape 28 graus">SHAPE<b>28</b><sup>°</sup></span>
-      <p class="offer-sub">Desafio de 28 dias de calistenia</p>
-      <ul class="offer-list">
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>28 treinos de 15 minutos, em casa e sem equipamentos</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>O método 18° → 28°: 4 fases que esquentam semana a semana</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Área de membros no celular com seu termômetro de progresso</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>6 meses de acesso: dá pra repetir o ciclo até o verão</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Garantia incondicional de 7 dias</li>
-      </ul>
-      <div class="price"><sup>R$</sup>12</div>
-      <p class="price-sub">pagamento único · Pix ou cartão</p>
-      <a class="btn btn-block js-checkout" href="#oferta">
-        Começar meu Shape 28°
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-      </a>
-      <div class="bump"><span style="font-size:18px;line-height:1.1">★</span><span>No checkout você pode trocar pra <b>acesso vitalício</b> por só <b>+R$5</b> e ter o Shape 28° em todo verão.</span></div>
-      <div class="pay">
-        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>Compra segura</span>
-        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg>Acesso imediato</span>
-        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"/></svg>7 dias de garantia</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= CONSISTÊNCIA + GARANTIA ================= -->
+<!-- ================= POR QUE FUNCIONA + GARANTIA ================= -->
 <section style="padding-top:0">
   <div class="wrap truth">
     <div class="truth-card y-card reveal">
       <span class="y-kicker">Por que funciona</span>
-      <h3>15 minutos hoje valem mais que 2 horas em dezembro.</h3>
-      <p>Quem chega pronto no verão não fez nada de outro mundo: <strong>só começou antes</strong>. O Shape 28° tira de você o trabalho de pensar. Você abre, faz o treino do dia e vê o termômetro subir. Grau por grau, até os 28°.</p>
+      <h3>Consistência vence intensidade.</h3>
+      <p>Quem evolui não fez nada de outro mundo: <strong>seguiu um caminho e não parou.</strong> O Shape 28° tira de você o trabalho de pensar no que fazer. Você abre, faz o treino do dia e vê o termômetro subir. Grau por grau.</p>
       <ul class="y-list">
-        <li><b>Treino pronto todo dia.</b> Nada de montar ficha ou ver vídeo aleatório.</li>
-        <li><b>Sobe de nível sozinho.</b> Cada semana esquenta um pouco, no seu ritmo.</li>
-        <li><b>Cabe em qualquer rotina.</b> 15 minutos, no quarto, sem equipamento.</li>
+        <li><b>Um caminho pronto.</b> Cada treino já sabe qual é o próximo.</li>
+        <li><b>Progressão de verdade.</b> Cada fase prepara a seguinte, no seu ritmo.</li>
+        <li><b>Cabe na sua rotina.</b> 15 minutos, em casa, sem equipamento.</li>
       </ul>
-      <a class="btn btn-dark js-checkout" href="#oferta">Quero começar hoje
+      <a class="btn btn-dark" href="#oferta">Quero começar hoje
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
       </a>
     </div>
@@ -633,17 +781,36 @@
   </div>
 </section>
 
+<!-- ================= QUIZ CTA (quem chegou direto) ================= -->
+<section style="padding-top:0" id="quiz">
+  <div class="wrap">
+    <div class="quiz-cta reveal">
+      <div>
+        <span class="eyebrow">Menos de 1 minuto</span>
+        <h2 class="h2">Descubra seu <span class="y">caminho</span> no Shape 28°.</h2>
+        <p class="lead">Responda algumas perguntas rápidas e veja por onde começar sua evolução.</p>
+        <button class="btn js-quiz" type="button" style="margin-top:28px">
+          Descobrir meu caminho
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </button>
+      </div>
+      <div class="mini-thermo" aria-hidden="true"><i data-t="18°"></i><i data-t="22°"></i><i data-t="25°"></i><i data-t="28°"></i></div>
+    </div>
+  </div>
+</section>
+
 <!-- ================= FAQ ================= -->
 <section style="padding-top:0">
   <div class="wrap">
     <span class="eyebrow reveal">Dúvidas</span>
     <h2 class="h2 reveal">Perguntas frequentes</h2>
     <div class="faq">
-      <details class="reveal"><summary>O que é calistenia?</summary><p>É o treino com o peso do próprio corpo: flexões, agachamentos, pranchas, afundos e variações. Por isso dá pra fazer em casa, sem nenhum equipamento.</p></details>
-      <details class="reveal"><summary>Nunca treinei. Consigo fazer?</summary><p>Consegue. A semana 1 (18°) é pra ligar o motor, com movimentos simples e variações mais fáceis. A temperatura sobe aos poucos, no seu ritmo.</p></details>
+      <details class="reveal"><summary>Como funciona o método?</summary><p>São 28 dias divididos em 4 fases: 18° (comece), 22° (adapte), 25° (evolua) e 28° (consolide). Cada treino leva ao próximo e cada fase aumenta um pouco o desafio. Você acompanha tudo pela sua conta: o treino do dia, a demonstração dos exercícios e o seu progresso.</p></details>
+      <details class="reveal"><summary>Nunca treinei. Consigo fazer?</summary><p>Consegue. A primeira fase é pra tirar o corpo da inércia, com movimentos simples e variações mais fáceis. Você começa de onde está e evolui no seu ritmo.</p></details>
+      <details class="reveal"><summary>Preciso de academia ou equipamentos?</summary><p>Não. O Shape 28° usa o peso do próprio corpo e dá pra fazer em casa. A área de academia existe só no Premium, pra quem quer levar a evolução pra lá.</p></details>
       <details class="reveal"><summary>15 minutos por dia funciona mesmo?</summary><p>Funciona pra criar o hábito e evoluir com constância, que é o que mais pesa. Os resultados variam de pessoa pra pessoa e dependem também de alimentação e sono.</p></details>
-      <details class="reveal"><summary>Como recebo o acesso?</summary><p>Logo depois do pagamento você recebe no e-mail o link da área de membros. É só criar sua conta com o <b>mesmo e-mail da compra</b> e o acesso já aparece liberado. No Pix a liberação costuma ser na hora.</p></details>
-      <details class="reveal"><summary>Por quanto tempo tenho acesso?</summary><p>6 meses a partir da compra, tempo pra repetir o ciclo de 28 dias várias vezes antes do verão. No checkout dá pra trocar pra acesso vitalício por mais R$5.</p></details>
+      <details class="reveal"><summary>Qual a diferença entre Shape 28°, Vitalício e Premium?</summary><p><b>Shape 28°</b>: o primeiro ciclo do método, com 6 meses de acesso. <b>Vitalício</b>: o mesmo método, com acesso pra sempre. <b>Premium</b>: acesso vitalício + área Premium com treinos de academia direcionados ao seu objetivo (massa, força, definição ou condicionamento). Você escolhe no checkout e pode fazer o upgrade depois, de dentro da sua conta.</p></details>
+      <details class="reveal"><summary>Como recebo o acesso?</summary><p>Logo depois do pagamento você recebe no e-mail o link de acesso. É só criar sua conta com o <b>mesmo e-mail da compra</b> e tudo já aparece liberado. No Pix a liberação costuma ser na hora.</p></details>
       <details class="reveal"><summary>E se eu não gostar?</summary><p>Você tem 7 dias de garantia. É só pedir o reembolso e recebe o valor de volta.</p></details>
     </div>
   </div>
@@ -653,10 +820,10 @@
 <section class="final">
   <div class="final-img"><img src="img/por-do-sol.webp" alt="" loading="lazy" width="2000" height="1125"></div>
   <div class="wrap">
-    <h2 class="h2 reveal">Quando os 28 graus chegarem, você não quer começar. <span class="y">Você quer estar pronto.</span></h2>
-    <p class="lead reveal">Não deixe pra dezembro aquilo que você pode começar <span id="mes">hoje</span>.</p>
-    <a class="btn js-checkout reveal" href="#oferta">
-      Esquentar agora
+    <h2 class="h2 reveal">28 dias podem ser <span class="y">o começo de uma mudança.</span></h2>
+    <p class="lead reveal">Você não precisa estar pronto pra começar. Precisa começar pra ficar pronto. Comece <span id="mes">hoje</span>.</p>
+    <a class="btn reveal" href="#oferta">
+      Começar meu Shape 28°
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
     </a>
   </div>
@@ -672,12 +839,12 @@
 
 <!-- Barra fixa mobile -->
 <div class="sticky" id="sticky">
-  <div class="s-price"><small>Acesso completo</small><b>R$12</b></div>
-  <a class="btn js-checkout" href="#oferta">Esquentar agora</a>
+  <div class="s-price"><small>Primeiro ciclo</small><b>R$9,90</b></div>
+  <a class="btn" href="#oferta">Começar meu Shape 28°</a>
 </div>
 
-<!-- ================= QUIZ (overlay) ================= -->
-<div class="quiz" id="quizBox" role="dialog" aria-modal="true" aria-label="Descubra seu ponto de partida">
+<!-- ================= QUIZ (primeira experiência) ================= -->
+<div class="quiz" id="quizBox" role="dialog" aria-modal="true" aria-label="Descubra seu caminho no Shape 28°">
   <div class="quiz-top">
     <span class="logo">SHAPE<b>28</b><sup>°</sup></span>
     <div class="q-progress"><i id="qBar"></i></div>
@@ -698,13 +865,20 @@ function checkoutUrl(extra){
     return u.toString();
   }catch(e){ return url; }
 }
-document.querySelectorAll(".js-checkout").forEach(function(a){ a.href = checkoutUrl(); });
+function setCheckoutLinks(extra){
+  document.querySelectorAll(".js-checkout").forEach(function(a){
+    var ex = {}; if (extra) Object.keys(extra).forEach(function(k){ ex[k] = extra[k]; });
+    if (a.dataset.tier) ex.utm_term = a.dataset.tier;
+    a.href = checkoutUrl(ex);
+  });
+}
+setCheckoutLinks();
 
 /* ---------- Mês atual na frase final ---------- */
 (function(){
   var m = ["janeiro","fevereiro","março","abril","maio","junho","julho","agosto","setembro","outubro","novembro","dezembro"][new Date().getMonth()];
   var el = document.getElementById("mes");
-  if (el && m !== "dezembro") el.textContent = "em " + m;
+  if (el) el.textContent = "hoje, ainda em " + m;
   document.getElementById("y").textContent = new Date().getFullYear();
 })();
 
@@ -714,8 +888,8 @@ document.querySelectorAll(".js-checkout").forEach(function(a){ a.href = checkout
   var start = new Date(y, 11, 21), end = new Date(y, 2, 20);
   var inSummer = now >= start || now < end;
   if (inSummer){
-    document.querySelectorAll(".js-summer").forEach(function(el){ el.textContent = "O verão chegou. Ainda dá tempo de esquentar"; });
-    document.querySelectorAll(".js-cycles-line").forEach(function(el){ el.textContent = "E cada ciclo de 28 dias te deixa mais pronto pro resto da temporada."; });
+    document.querySelectorAll(".js-summer").forEach(function(el){ el.textContent = "O verão chegou. Ainda dá tempo de começar"; });
+    document.querySelectorAll(".js-cycles-line").forEach(function(el){ el.textContent = "E cada novo ciclo leva você um pouco mais longe."; });
     return;
   }
   var days = Math.ceil((start - now) / 864e5);
@@ -766,81 +940,189 @@ document.querySelectorAll(".js-checkout").forEach(function(a){ a.href = checkout
 })();
 
 /* =========================================================
-   QUIZ "DESCUBRA SEU PONTO DE PARTIDA" — edite textos aqui
+   QUIZ "DESCUBRA SEU CAMINHO" — edite os textos aqui
+   É a primeira tela do site. Depois do resultado, a pessoa
+   segue pra landing (nunca direto pro checkout).
    ========================================================= */
 var QUIZ = [
-  { q:"Há quanto tempo você não treina?", key:"hist", opts:[
-    {t:"Nunca treinei de verdade", s:0},
-    {t:"Parei há mais de 6 meses", s:1},
-    {t:"Treino de vez em quando", s:2},
-    {t:"Treino com frequência", s:3} ]},
-  { q:"Quantas flexões seguidas você faz hoje?", key:"flex", opts:[
-    {t:"Nenhuma ou quase nenhuma", s:0},
-    {t:"Entre 5 e 15", s:1},
-    {t:"Entre 15 e 30", s:2},
-    {t:"Mais de 30", s:3} ]},
-  { q:"O que você quer ter quando chegar nos 28°?", key:"obj", opts:[
-    {t:"Menos barriga", v:"perder a barriga"},
-    {t:"Mais definição", v:"ganhar definição"},
-    {t:"Mais força", v:"ganhar força"},
-    {t:"O hábito de treinar", v:"criar o hábito de treinar"} ]},
-  { q:"Que horário fica melhor pra você?", key:"hora", opts:[
-    {t:"Logo cedo, antes do dia começar", v:"cedo"},
-    {t:"Na hora do almoço", v:"almoco"},
-    {t:"À noite", v:"noite"},
-    {t:"Varia muito", v:"varia"} ]},
-  { q:"O que mais te travou até hoje?", key:"trava", opts:[
+  { key:"obj", q:"O que você mais gostaria de mudar no seu corpo hoje?", opts:[
+    {t:"Ganhar massa muscular", v:"massa"},
+    {t:"Ficar mais forte", v:"forca"},
+    {t:"Perder gordura e definir", v:"definir"},
+    {t:"Melhorar meu condicionamento", v:"condicionamento"},
+    {t:"Ter mais disposição", v:"disposicao"},
+    {t:"Melhorar meu corpo e minha autoestima", v:"autoestima"},
+    {t:"Só quero começar a treinar", v:"comecar"} ]},
+  { key:"exp", q:"Como você se considera hoje?", opts:[
+    {t:"Estou começando do zero", v:"zero", temp:18},
+    {t:"Já treinei, mas parei", v:"parei", temp:19},
+    {t:"Treino de vez em quando", v:"vezes", temp:20},
+    {t:"Treino regularmente", v:"regular", temp:22},
+    {t:"Já tenho bastante experiência", v:"experiente", temp:22} ]},
+  { key:"local", q:"Onde você prefere treinar?", opts:[
+    {t:"Em casa", v:"casa"},
+    {t:"Na academia", v:"academia"},
+    {t:"Quero combinar os dois", v:"ambos"},
+    {t:"Ainda não sei", v:"naosei"} ]},
+  { key:"tempo", q:"Quanto tempo você consegue dedicar ao treino por dia?", opts:[
+    {t:"5–10 minutos", v:"5"},
+    {t:"15 minutos", v:"15"},
+    {t:"20–30 minutos", v:"30"},
+    {t:"Mais de 30 minutos", v:"mais"} ]},
+  { key:"trava", q:"O que mais atrapalha você a manter uma rotina de treino?", opts:[
+    {t:"Não sei exatamente o que fazer", v:"saber"},
+    {t:"Começo e paro", v:"paro"},
     {t:"Falta de tempo", v:"tempo"},
-    {t:"Começo e paro", v:"constancia"},
-    {t:"Não sabia o que fazer", v:"saber"},
-    {t:"Academia cara", v:"dinheiro"} ]}
+    {t:"Falta de motivação", v:"motivacao"},
+    {t:"Não vejo evolução", v:"evolucao"},
+    {t:"Não gosto de academia", v:"academia"},
+    {t:"Não consigo manter uma rotina", v:"rotina"} ]},
+  { key:"desejo", q:"Quando você imagina seu corpo daqui a alguns meses, o que mais gostaria de sentir?", opts:[
+    {t:"Orgulho de olhar para mim", v:"sentir orgulho ao se olhar no espelho"},
+    {t:"Mais força no dia a dia", v:"sentir mais força no dia a dia"},
+    {t:"Mais confiança com meu corpo", v:"sentir mais confiança com o seu corpo"},
+    {t:"Mais disposição", v:"sentir mais disposição"},
+    {t:"Sentir que finalmente evoluí", v:"sentir que finalmente evoluiu"},
+    {t:"Ter um físico mais definido", v:"ter um físico mais definido"},
+    {t:"Ter um físico mais desenvolvido", v:"ter um físico mais desenvolvido"} ]},
+  { key:"quando", q:"Se você tivesse um caminho simples para seguir, quando começaria?", opts:[
+    {t:"Hoje", v:"hoje"},
+    {t:"Amanhã", v:"amanha"},
+    {t:"Nesta semana", v:"semana"},
+    {t:"Prefiro deixar para depois", v:"depois"} ]}
 ];
 
-/* adapt = estimativa de dias até o treino ficar natural */
-var LEVELS = [
-  { max:1, temp:18, color:"var(--cold)", name:"Ponto de partida: Frio", adapt:"10 a 14",
-    text:"Você está começando do zero, e isso é bom: o corpo responde rápido quando sai da inércia. Comece pelas <strong>variações mais fáceis</strong> e foque numa coisa só: não pular nenhum dia." },
-  { max:3, temp:20, color:"var(--mild)", name:"Ponto de partida: Morno", adapt:"7 a 10",
-    text:"Você já tem alguma base, só falta constância. Siga o plano desde o dia 1 sem pular etapas e <strong>aumente as repetições</strong> sempre que ficar fácil." },
-  { max:6, temp:22, color:"var(--warm)", name:"Ponto de partida: Aquecido", adapt:"4 a 6",
-    text:"Você já treina e aguenta um volume bom. Use as <strong>variações mais difíceis</strong> desde a primeira semana e reduza o descanso pra aproveitar bem os 15 minutos." }
-];
-var HORA = {
-  cedo:"Treine logo ao acordar, antes de pegar o celular. 15 minutos e o dia já começa ganho.",
-  almoco:"Separe 15 minutos antes de almoçar. É o horário mais fácil de proteger na rotina.",
-  noite:"Treine antes do banho da noite, pelo menos 1 hora antes de dormir.",
-  varia:"Escolha um gatilho fixo em vez de um horário, tipo \"depois do banho\" ou \"antes do jantar\"."
+/* Título do resultado: vem do objetivo (ou da experiência, se já treina) */
+var R_TITLE = {
+  massa:"Seu caminho começa com consistência e progressão",
+  forca:"Seu caminho começa construindo uma base de força",
+  definir:"Seu primeiro passo é colocar o corpo em movimento",
+  condicionamento:"Seu caminho começa ganhando fôlego, dia após dia",
+  disposicao:"Seu caminho começa devolvendo energia pro seu corpo",
+  autoestima:"Sua evolução começa antes de o espelho mostrar",
+  comecar:"Seu caminho começa pelo primeiro passo certo"
 };
-var TRAVA = {
-  tempo:"<b>Falta de tempo?</b>São 15 minutos. Menos que um episódio de série.",
-  constancia:"<b>Começa e para?</b>Marque cada dia concluído na área de membros e não deixe o termômetro esfriar.",
-  saber:"<b>Não sabia o que fazer?</b>O treino do dia já vem pronto. É só abrir e seguir.",
-  dinheiro:"<b>Academia cara?</b>R$12 uma vez, sem mensalidade e sem equipamento."
+var R_GOAL = {
+  massa:"ganhar massa muscular",
+  forca:"ficar mais forte",
+  definir:"perder gordura e definir",
+  condicionamento:"melhorar seu condicionamento",
+  disposicao:"ter mais disposição",
+  autoestima:"se sentir melhor com seu corpo",
+  comecar:"começar a treinar de verdade"
 };
+/* Por que esse objetivo começa pela base do método */
+var R_WHY = {
+  massa:"Músculo cresce com estímulo constante e progressivo. Antes de volume e carga, seu corpo precisa de base e regularidade, e é isso que o primeiro ciclo constrói.",
+  forca:"Força se constrói dominando os movimentos base e aumentando o desafio aos poucos. É assim que cada fase do método funciona.",
+  definir:"Definição é resultado de constância. Treinos curtos que você realmente consegue manter valem mais do que planos longos que param na segunda semana.",
+  condicionamento:"Fôlego melhora com regularidade. Treinar um pouco todos os dias, aumentando o ritmo a cada semana, é o jeito mais seguro de chegar lá.",
+  disposicao:"Disposição vem do movimento. Poucos minutos por dia, com constância, já mudam como você acorda e encara o dia.",
+  autoestima:"Cada treino concluído é uma promessa que você cumpriu consigo. Essa sensação chega antes de qualquer mudança no espelho, e é ela que mantém você no caminho.",
+  comecar:"Você não precisa de um plano perfeito. Precisa de um caminho simples, que diga o que fazer hoje e o que vem depois."
+};
+var R_TRAVA = {
+  saber:"<b>Você não sabe exatamente o que fazer.</b> No método, cada dia já vem com o treino pronto e a demonstração de cada exercício. É só abrir e seguir.",
+  paro:"<b>Você começa e para.</b> Você não precisa de mais um pico de motivação. Precisa de uma estrutura que facilite a consistência.",
+  tempo:"<b>Seu tempo é curto.</b> Seu ponto de partida precisa caber na sua rotina, não competir com ela.",
+  motivacao:"<b>A motivação oscila.</b> Por isso o método não depende dela: você só precisa cumprir o treino de hoje e ver o termômetro subir.",
+  evolucao:"<b>Você não vê evolução.</b> No método, você mede: testes no começo e no fim do ciclo mostram o quanto você avançou.",
+  academia:"<b>Você não gosta de academia.</b> O primeiro ciclo é todo em casa, com o peso do próprio corpo.",
+  rotina:"<b>Manter a rotina é o mais difícil.</b> Treinos curtos e uma sequência clara transformam a intenção em hábito."
+};
+var R_TEMPO = {
+  "5":"Comece protegendo um horário curto. Nos dias mais leves do método, isso já basta pra não quebrar a sequência.",
+  "15":"15 minutos por dia é exatamente o ritmo do método.",
+  "30":"Com esse tempo você faz o treino do dia com calma, incluindo aquecimento e as variações mais difíceis.",
+  "mais":"Você tem tempo de sobra. Use o primeiro ciclo pra construir técnica e constância, a base de qualquer treino mais longo."
+};
+var R_QUANDO = {
+  hoje:"E se é hoje, melhor ainda: seu Dia 1 pode começar agora.",
+  amanha:"Amanhã é um ótimo Dia 1. Deixe tudo pronto hoje.",
+  semana:"Escolha o dia desta semana e trate ele como um compromisso com você.",
+  depois:"Quando decidir começar, o caminho vai estar aqui. Quanto antes, mais cedo você sente a diferença."
+};
+var TEMP_COLOR = {18:"var(--cold)",19:"var(--cold)",20:"var(--mild)",22:"var(--warm)"};
+
+function buildResult(a){
+  var obj = a.obj ? a.obj.v : "comecar";
+  var exp = a.exp ? a.exp.v : "zero";
+  var temp = a.exp ? a.exp.temp : 18;
+  var trained = exp === "regular" || exp === "experiente";
+  var title = trained && (obj === "comecar" || obj === "disposicao") ?
+    "Você já passou da fase de começar. Agora é evoluir" : R_TITLE[obj];
+  var intro = trained ?
+    "Você já passou da fase de simplesmente começar. Agora pode pensar em como continuar evoluindo, e evolução pede estrutura: saber o que fazer em cada fase e quando aumentar o desafio." :
+    "Você não precisa começar fazendo treinos longos ou extremamente difíceis. Seu primeiro passo deve ser simples: treinos curtos, progressivos e estruturados.";
+  var gym = a.local && (a.local.v === "academia" || a.local.v === "ambos") ?
+    "E quando você quiser levar isso pra academia, o Premium tem treinos direcionados ao seu objetivo." : "";
+  return { title:title, temp:temp, intro:intro, goal:R_GOAL[obj], why:R_WHY[obj],
+    trava:R_TRAVA[a.trava ? a.trava.v : "rotina"], tempo:R_TEMPO[a.tempo ? a.tempo.v : "15"],
+    desejo:a.desejo ? a.desejo.v : "sentir que finalmente evoluiu", quando:R_QUANDO[a.quando ? a.quando.v : "hoje"], gym:gym, obj:obj };
+}
+
+/* Personaliza a landing com o resultado */
+function applyPath(r){
+  if (!r) return;
+  var p = document.getElementById("path");
+  document.querySelector(".js-path-t").textContent = r.temp + "°";
+  document.querySelector(".js-path-t").style.color = TEMP_COLOR[r.temp] || "var(--cold)";
+  document.querySelector(".js-path-title").textContent = r.title + ".";
+  document.querySelector(".js-path-sub").textContent = "Seu objetivo: " + r.goal + ". Seu ponto de partida no método: " + r.temp + "°.";
+  p.classList.add("show");
+  document.querySelector(".js-pill").textContent = "Seu ponto de partida:";
+  document.querySelector(".js-pill-t").textContent = r.temp + "°";
+  setCheckoutLinks({ utm_content: "quiz-" + r.obj + "-" + r.temp });
+}
+function saveRes(r){ try{ sessionStorage.setItem("s28_path", JSON.stringify(r)); }catch(e){} }
+function loadRes(){ try{ return JSON.parse(sessionStorage.getItem("s28_path") || "null"); }catch(e){ return null; } }
+function markSeen(){ try{ sessionStorage.setItem("s28_quiz_seen","1"); }catch(e){} }
+function seen(){ try{ return sessionStorage.getItem("s28_quiz_seen") === "1"; }catch(e){ return false; } }
 
 (function(){
   var box = document.getElementById("quizBox"), body = document.getElementById("qBody"), bar = document.getElementById("qBar");
-  var step = 0, ans = {}, lastFocus = null;
+  var step = -1, ans = {}, lastFocus = null;
 
-  function open(){
-    lastFocus = document.activeElement; step = 0; ans = {};
+  function open(fromStart){
+    lastFocus = document.activeElement; ans = {};
+    step = fromStart ? -1 : 0;
     box.classList.add("open"); document.body.style.overflow = "hidden"; render();
   }
   function close(){
+    markSeen();
     box.classList.remove("open"); document.body.style.overflow = "";
-    if (lastFocus) lastFocus.focus();
+    if (lastFocus && lastFocus.focus) lastFocus.focus({preventScroll:true});
+  }
+  function goLanding(hash){
+    close();
+    if (hash){ var el = document.getElementById(hash); if (el) el.scrollIntoView({behavior:"smooth"}); }
+    else window.scrollTo({top:0, behavior:"smooth"});
+  }
+  function intro(){
+    bar.style.width = "0%";
+    body.innerHTML = '<div class="q-intro q-anim">'
+      + '<div class="mini-thermo" aria-hidden="true"><i data-t="18°"></i><i data-t="22°"></i><i data-t="25°"></i><i data-t="28°"></i></div>'
+      + '<h1>Descubra seu caminho no <span class="y">Shape 28°</span></h1>'
+      + '<p>Responda algumas perguntas rápidas e descubra por onde começar sua evolução.</p>'
+      + '<button class="btn" type="button" id="qStart">Descobrir meu caminho<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>'
+      + '<p class="fine">Leva menos de 1 minuto.</p>'
+      + '<button class="q-skip" type="button" id="qSkip">Prefiro conhecer o método primeiro</button>'
+      + '</div>';
+    document.getElementById("qStart").addEventListener("click", function(){ step = 0; render(); });
+    document.getElementById("qSkip").addEventListener("click", function(){ goLanding(); });
+    document.getElementById("qStart").focus({preventScroll:true});
   }
   function render(){
+    if (step < 0) return intro();
     bar.style.width = (step / QUIZ.length * 100) + "%";
     if (step >= QUIZ.length) return loading();
     var it = QUIZ[step];
-    var html = '<div class="q-anim"><div class="q-step">Pergunta ' + (step+1) + ' de ' + QUIZ.length + '</div>'
-      + '<h2 class="q-title">' + it.q + '</h2><div class="q-opts">';
+    var html = '<div class="q-anim"><h2 class="q-title">' + it.q + '</h2><div class="q-opts">';
     it.opts.forEach(function(o,i){
       var sel = ans[it.key] && ans[it.key].t === o.t ? " sel" : "";
-      html += '<button class="q-opt' + sel + '" type="button" data-i="' + i + '"><span class="k">' + "ABCD"[i] + '</span>' + o.t + '</button>';
+      html += '<button class="q-opt' + sel + '" type="button" data-i="' + i + '"><span class="k">' + "ABCDEFG"[i] + '</span>' + o.t + '</button>';
     });
-    html += '</div>' + (step > 0 ? '<button class="q-back" type="button">← Voltar</button>' : '') + '</div>';
+    html += '</div><button class="q-back" type="button">← Voltar</button></div>';
     body.innerHTML = html;
     body.querySelectorAll(".q-opt").forEach(function(b){
       b.addEventListener("click", function(){
@@ -849,49 +1131,54 @@ var TRAVA = {
         setTimeout(function(){ step++; render(); }, 220);
       });
     });
-    var back = body.querySelector(".q-back");
-    if (back) back.addEventListener("click", function(){ step--; render(); });
+    body.querySelector(".q-back").addEventListener("click", function(){ step--; render(); });
     var first = body.querySelector(".q-opt"); if (first) first.focus({preventScroll:true});
     box.scrollTop = 0;
   }
   function loading(){
     var t = 18;
-    body.innerHTML = '<div class="q-loading q-anim"><div class="big" id="qT">18°</div><p>Medindo sua temperatura…</p></div>';
+    body.innerHTML = '<div class="q-loading q-anim"><div class="big" id="qT">18°</div><p>Montando seu caminho…</p></div>';
     var el = document.getElementById("qT");
     var iv = setInterval(function(){ t++; el.textContent = t + "°"; if (t >= 28){ clearInterval(iv); setTimeout(result, 350); } }, 90);
   }
   function result(){
-    var score = (ans.hist ? ans.hist.s : 0) + (ans.flex ? ans.flex.s : 0);
-    var lv = LEVELS.filter(function(l){ return score <= l.max; })[0] || LEVELS[LEVELS.length-1];
-    var url = checkoutUrl({ utm_content: "quiz-" + lv.temp });
+    var r = buildResult(ans);
+    saveRes(r); applyPath(r);
     body.innerHTML = '<div class="q-anim">'
-      + '<div class="q-step">Sua temperatura hoje</div>'
-      + '<div class="r-head"><span class="r-deg" style="color:' + lv.color + '">' + lv.temp + '°</span><span class="r-arrow">→</span><span class="r-goal">28°</span></div>'
-      + '<span class="r-level">' + lv.name + '</span>'
-      + '<div class="r-adapt"><b>' + lv.adapt + '</b><span><strong>dias pro seu corpo pegar o ritmo</strong>É quando o treino de 15 minutos deixa de ser estranho e vira rotina.</span></div>'
-      + '<p class="r-note">Estimativa baseada nas suas respostas. Cada corpo tem seu tempo.</p>'
-      + '<p class="r-text">Seu objetivo é <strong>' + (ans.obj ? ans.obj.v : "evoluir") + '</strong>. ' + lv.text + '</p>'
+      + '<div class="r-mini"><b style="color:' + (TEMP_COLOR[r.temp] || "var(--cold)") + '">' + r.temp + '°</b><i>→</i><b class="y">28°</b><span>Seu ponto de partida no método</span></div>'
+      + '<h2 class="r-title">' + r.title + '</h2>'
+      + '<div class="r-text"><p>' + r.intro + '</p></div>'
       + '<ul class="r-list">'
-      + '<li><span class="n">1</span><div><b>Seu horário</b>' + HORA[ans.hora ? ans.hora.v : "varia"] + '</div></li>'
-      + '<li><span class="n">2</span><div>' + TRAVA[ans.trava ? ans.trava.v : "tempo"] + '</div></li>'
-      + '<li><span class="n">3</span><div><b>Sua meta</b>Completar os 28 dias e chegar nos 28°. Depois, repetir o ciclo e entrar no verão 56 ou 84 dias na frente.</div></li>'
+      + '<li><span class="n">1</span><div><b>Seu objetivo: ' + r.goal + '</b>' + r.why + '</div></li>'
+      + '<li><span class="n">2</span><div>' + r.trava + '</div></li>'
+      + '<li><span class="n">3</span><div><b>Daqui a alguns meses</b>Você quer ' + r.desejo + '. Isso começa com o primeiro ciclo e continua a cada novo grau. ' + r.gym + '</div></li>'
       + '</ul>'
-      + '<a class="btn btn-block" href="' + url + '" id="qBuy">Começar meu Shape 28° agora<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>'
-      + '<p class="r-price">R$12 · pagamento único · 7 dias de garantia</p>'
-      + '<button class="q-back" type="button" id="qRedo">Refazer o diagnóstico</button>'
+      + '<div class="r-rec"><small>Nossa recomendação</small>'
+      + '<p>É exatamente essa a proposta do primeiro ciclo do Shape 28°. ' + r.tempo + ' ' + r.quando + '</p>'
+      + '<div class="r-four">28 dias.<br>15 minutos por dia.<br>Uma sequência progressiva.<br>Um passo de cada vez.</div></div>'
+      + '<button class="btn btn-block" type="button" id="qSee">Ver meu caminho<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>'
+      + '<a class="r-alt" href="#oferta" id="qOffer">Já quero começar meu Shape 28°</a>'
+      + '<button class="q-back" type="button" id="qRedo">Refazer</button>'
       + '</div>';
     bar.style.width = "100%";
+    document.getElementById("qSee").addEventListener("click", function(){ goLanding(); });
+    document.getElementById("qOffer").addEventListener("click", function(e){ e.preventDefault(); goLanding("oferta"); });
     document.getElementById("qRedo").addEventListener("click", function(){ step = 0; ans = {}; render(); });
-    document.getElementById("qBuy").addEventListener("click", function(e){
-      if (this.getAttribute("href") === "#oferta"){ e.preventDefault(); close(); location.hash = "oferta"; }
-    });
     box.scrollTop = 0;
   }
 
-  document.querySelectorAll(".js-quiz").forEach(function(b){ b.addEventListener("click", open); });
+  document.querySelectorAll(".js-quiz").forEach(function(b){ b.addEventListener("click", function(){ open(false); }); });
   document.getElementById("qClose").addEventListener("click", close);
   document.addEventListener("keydown", function(e){ if (e.key === "Escape" && box.classList.contains("open")) close(); });
-  if (location.hash === "#diagnostico") open();
+
+  /* O quiz é a primeira tela: abre sozinho na primeira visita da sessão.
+     Não abre se a pessoa veio com um link pra uma seção (#oferta, #jornada…) ou com ?quiz=0 */
+  var prev = loadRes();
+  if (prev) applyPath(prev);
+  var params = new URLSearchParams(location.search);
+  var skip = params.get("quiz") === "0" || (location.hash && location.hash !== "#diagnostico" && location.hash !== "#quiz");
+  if (location.hash === "#diagnostico" || location.hash === "#quiz") open(true);
+  else if (!skip && !seen() && !prev) open(true);
 })();
 </script>
 </body>
