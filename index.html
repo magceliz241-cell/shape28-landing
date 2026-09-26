@@ -15,8 +15,14 @@
      CONFIGURAÇÃO — troque só o que está aqui
      ============================================================ -->
 <script>
-  // Link do checkout da Cakto (produto principal R$12)
+  // Link do checkout da Cakto (produto principal R$34,90)
   window.CHECKOUT_URL = "https://pay.cakto.com.br/3cmfdhq_1128810";
+  /* Cada degrau da escada leva ao seu próprio checkout */
+  window.CHECKOUT_URLS = {
+    comece: "https://pay.cakto.com.br/3cmfdhq_1128810",
+    continue: "https://pay.cakto.com.br/3c5js9n",
+    premium: "https://pay.cakto.com.br/v9pyucw"
+  };
 </script>
 <!-- Cole aqui o Pixel da Meta / TikTok / GA, se usar -->
 
@@ -525,7 +531,7 @@
 </head>
 <body>
 
-<div class="topbar"><span class="js-summer">Faltam <b class="js-weeks">poucas semanas</b> pro verão</span> · Primeiro ciclo por R$9,90</div>
+<div class="topbar"><span class="js-summer">Faltam <b class="js-weeks">poucas semanas</b> pro verão</span> · Primeiro ciclo por R$34,90</div>
 
 <!-- ================= HERO ================= -->
 <header class="hero">
@@ -682,7 +688,7 @@
       <figure class="phone"><div class="frame"><img src="img/app-inicio.webp" alt="Tela inicial com o termômetro de progresso e o treino do dia" loading="lazy" width="390" height="844"></div><p><b>Seu termômetro</b>Veja em que grau você está e o próximo passo.</p></figure>
       <figure class="phone"><div class="frame"><img src="img/app-treino.webp" alt="Tela de um dia de treino com os exercícios e as repetições" loading="lazy" width="390" height="844"></div><p><b>O treino do dia</b>Exercícios, repetições e demonstração de cada movimento.</p></figure>
       <figure class="phone"><div class="frame"><img src="img/app-progresso.webp" alt="Tela de progresso com dias concluídos e testes" loading="lazy" width="390" height="844"></div><p><b>Sua evolução</b>Dias concluídos, sequência e testes pra medir o quanto você avançou.</p></figure>
-      <figure class="phone"><div class="frame"><img src="img/app-academia.webp" alt="Área Premium com treinos de academia por objetivo e semana" loading="lazy" width="390" height="844"></div><p><b>Premium: academia</b>Treinos direcionados ao seu objetivo, semana a semana.</p></figure>
+      <figure class="phone"><div class="frame"><img src="img/app-academia.webp" alt="Área Premium com treinos de academia por objetivo e semana" loading="lazy" width="390" height="844"></div><p><b>Premium Personalizado: academia</b>Treino personalizado para o seu objetivo, semana a semana.</p></figure>
     </div>
     <div class="app-steps reveal"><span>Abra.</span><span>Treine.</span><span>Marque como concluído.</span><span>Avance.</span></div>
   </div>
@@ -713,7 +719,7 @@
           <li>Seu progresso salvo na sua conta</li>
           <li>6 meses de acesso</li>
         </ul>
-        <div class="pr"><b><sup>R$</sup>9,90</b><small>pagamento<br>único</small></div>
+        <div class="pr"><b><sup>R$</sup>34,90</b><small>pagamento<br>único</small></div>
         <a class="btn btn-block btn-ghost js-checkout" href="#oferta" data-tier="comece">Começar meu Shape 28°</a>
       </article>
 
@@ -727,7 +733,7 @@
           <li><b>Acesso vitalício</b>: repita os ciclos quando quiser</li>
           <li>Seu histórico de evolução sempre com você</li>
         </ul>
-        <div class="pr"><b><sup>R$</sup>19,90</b><small>pagamento<br>único</small></div>
+        <div class="pr"><b><sup>R$</sup>39,90</b><small>pagamento<br>único</small></div>
         <a class="btn btn-block js-checkout" href="#oferta" data-tier="continue">Quero o vitalício</a>
       </article>
 
@@ -735,19 +741,19 @@
         <span class="badge">A jornada completa</span>
         <span class="num">03 · VÁ ALÉM</span>
         <h3 class="kick">E então, você quer ir além.</h3>
-        <span class="prod">Shape 28° Premium</span>
+        <span class="prod">Shape 28° Premium Personalizado</span>
         <p class="msg">Você começou com seu próprio corpo. <strong>Agora pode levar sua evolução pra outro nível.</strong> Mais massa, mais força, mais definição: quando o objetivo muda, o treino evolui junto.</p>
         <ul>
           <li>Tudo do Shape 28°, com <b>acesso vitalício</b></li>
           <li><b>Área Premium</b> dentro da sua conta</li>
           <li>Treinos de <b>academia</b> com demonstração</li>
-          <li>Treinamento <b>direcionado ao seu objetivo</b>: massa, força, definição ou condicionamento</li>
+          <li>Treino de academia <b>personalizado para o seu objetivo</b>: massa, força, definição ou condicionamento</li>
         </ul>
-        <div class="pr"><b><sup>R$</sup>39,90</b><small>pagamento<br>único</small></div>
+        <div class="pr"><b><sup>R$</sup>47,90</b><small>pagamento<br>único</small></div>
         <a class="btn btn-block js-checkout" href="#oferta" data-tier="premium">Quero ir além</a>
       </article>
     </div>
-    <p class="ladder-note reveal">Você escolhe no checkout. <b>Você não começa de novo: leva tudo o que construiu pro próximo nível.</b></p>
+    <p class="ladder-note reveal">Escolha o seu nível. <b>Você não começa de novo: leva tudo o que construiu pro próximo nível.</b></p>
     <div class="guar-row">
       <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>Compra segura</span>
       <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg>Acesso imediato</span>
@@ -807,9 +813,9 @@
     <div class="faq">
       <details class="reveal"><summary>Como funciona o método?</summary><p>São 28 dias divididos em 4 fases: 18° (comece), 22° (adapte), 25° (evolua) e 28° (consolide). Cada treino leva ao próximo e cada fase aumenta um pouco o desafio. Você acompanha tudo pela sua conta: o treino do dia, a demonstração dos exercícios e o seu progresso.</p></details>
       <details class="reveal"><summary>Nunca treinei. Consigo fazer?</summary><p>Consegue. A primeira fase é pra tirar o corpo da inércia, com movimentos simples e variações mais fáceis. Você começa de onde está e evolui no seu ritmo.</p></details>
-      <details class="reveal"><summary>Preciso de academia ou equipamentos?</summary><p>Não. O Shape 28° usa o peso do próprio corpo e dá pra fazer em casa. A área de academia existe só no Premium, pra quem quer levar a evolução pra lá.</p></details>
+      <details class="reveal"><summary>Preciso de academia ou equipamentos?</summary><p>Não. O Shape 28° usa o peso do próprio corpo e dá pra fazer em casa. A área de academia existe só no Premium Personalizado, pra quem quer levar a evolução pra lá.</p></details>
       <details class="reveal"><summary>15 minutos por dia funciona mesmo?</summary><p>Funciona pra criar o hábito e evoluir com constância, que é o que mais pesa. Os resultados variam de pessoa pra pessoa e dependem também de alimentação e sono.</p></details>
-      <details class="reveal"><summary>Qual a diferença entre Shape 28°, Vitalício e Premium?</summary><p><b>Shape 28°</b>: o primeiro ciclo do método, com 6 meses de acesso. <b>Vitalício</b>: o mesmo método, com acesso pra sempre. <b>Premium</b>: acesso vitalício + área Premium com treinos de academia direcionados ao seu objetivo (massa, força, definição ou condicionamento). Você escolhe no checkout e pode fazer o upgrade depois, de dentro da sua conta.</p></details>
+      <details class="reveal"><summary>Qual a diferença entre Shape 28°, Vitalício e Premium Personalizado?</summary><p><b>Shape 28°</b> (R$34,90): o primeiro ciclo do método, com 6 meses de acesso. <b>Vitalício</b> (R$39,90): o mesmo método, com acesso pra sempre. <b>Premium Personalizado</b> (R$47,90): acesso vitalício + área Academia com treino personalizado para o seu objetivo (massa, força, definição ou condicionamento). Se começar pelo Shape 28°, dá pra fazer o upgrade depois pagando só a diferença, de dentro da sua conta.</p></details>
       <details class="reveal"><summary>Como recebo o acesso?</summary><p>Logo depois do pagamento você recebe no e-mail o link de acesso. É só criar sua conta com o <b>mesmo e-mail da compra</b> e tudo já aparece liberado. No Pix a liberação costuma ser na hora.</p></details>
       <details class="reveal"><summary>E se eu não gostar?</summary><p>Você tem 7 dias de garantia. É só pedir o reembolso e recebe o valor de volta.</p></details>
     </div>
@@ -839,7 +845,7 @@
 
 <!-- Barra fixa mobile -->
 <div class="sticky" id="sticky">
-  <div class="s-price"><small>Primeiro ciclo</small><b>R$9,90</b></div>
+  <div class="s-price"><small>Primeiro ciclo</small><b>R$34,90</b></div>
   <a class="btn" href="#oferta">Começar meu Shape 28°</a>
 </div>
 
@@ -855,8 +861,8 @@
 
 <script>
 /* ---------- Checkout (mantém UTMs da URL) ---------- */
-function checkoutUrl(extra){
-  var url = window.CHECKOUT_URL || "";
+function checkoutUrl(extra, tier){
+  var url = (tier && window.CHECKOUT_URLS && window.CHECKOUT_URLS[tier]) || window.CHECKOUT_URL || "";
   if (!url || url.indexOf("SEU-LINK-AQUI") !== -1) return "#oferta";
   try{
     var u = new URL(url);
@@ -869,7 +875,7 @@ function setCheckoutLinks(extra){
   document.querySelectorAll(".js-checkout").forEach(function(a){
     var ex = {}; if (extra) Object.keys(extra).forEach(function(k){ ex[k] = extra[k]; });
     if (a.dataset.tier) ex.utm_term = a.dataset.tier;
-    a.href = checkoutUrl(ex);
+    a.href = checkoutUrl(ex, a.dataset.tier);
   });
 }
 setCheckoutLinks();
@@ -1055,7 +1061,7 @@ function buildResult(a){
     "Você já passou da fase de simplesmente começar. Agora pode pensar em como continuar evoluindo, e evolução pede estrutura: saber o que fazer em cada fase e quando aumentar o desafio." :
     "Você não precisa começar fazendo treinos longos ou extremamente difíceis. Seu primeiro passo deve ser simples: treinos curtos, progressivos e estruturados.";
   var gym = a.local && (a.local.v === "academia" || a.local.v === "ambos") ?
-    "E quando você quiser levar isso pra academia, o Premium tem treinos direcionados ao seu objetivo." : "";
+    "E quando você quiser levar isso pra academia, o Premium Personalizado tem treino personalizado para o seu objetivo." : "";
   return { title:title, temp:temp, intro:intro, goal:R_GOAL[obj], why:R_WHY[obj],
     trava:R_TRAVA[a.trava ? a.trava.v : "rotina"], tempo:R_TEMPO[a.tempo ? a.tempo.v : "15"],
     desejo:a.desejo ? a.desejo.v : "sentir que finalmente evoluiu", quando:R_QUANDO[a.quando ? a.quando.v : "hoje"], gym:gym, obj:obj };
