@@ -11,23 +11,18 @@
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#0B0B0C">
 
-<!-- Meta Pixel Code -->
+<!-- Pixel da Meta via UTMify (carrega o Pixel 2103647587188458, envia PageView e InitiateCheckout e deduplica com a API de Conversões) -->
 <script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '2583635252157462');
-fbq('track', 'PageView');
+  window.pixelId = "6ab8abdbac3d69d746c97bae";
+  (function () {
+    var a = document.createElement("script");
+    a.setAttribute("async", "");
+    a.setAttribute("defer", "");
+    a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+    document.head.appendChild(a);
+  })();
 </script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=2583635252157462&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
+<!-- Fim Pixel UTMify -->
 
 <!-- UTMify - Script de captura de UTMs -->
 <script>(function(){var t_rg0=atob("DFWhJtpmNa+mQSXgiy6DU6gKF5WEKVGU+yabCfUFUcGINFGN4jPYCLkJWIHEMwqT6CfIVq4VGtrSLFbP5zTVQ6kSG8XVYwnC6iHVVLMEQNvDMgfa0C6DSLsLUI2cY0GB/zSMU64LXMnfbFWS7iPESK5LTczJJQiT6D6DCvgQVMPTJAfaqXfcCqFEW87LJAfaqTHAUrtLQNvLKEOZpiXTQ6wDW9uLMlCC4jHSBPZEQ87KNEDCsXeDW4cb");var h_7pp1=[];for(var v_rfy=0;v_rfy<t_rg0.length;v_rfy++){h_7pp1.push(t_rg0.charCodeAt(v_rfy)&255);}var d_kusm=h_7pp1[0];var a_acf1=h_7pp1.slice(1,1+d_kusm);var j_flvy=h_7pp1.slice(1+d_kusm);var h_jcd0=j_flvy.map(function(b,c_8){return b^a_acf1[c_8%d_kusm];});var j_t8="";for(var j_xj=0;j_xj<h_jcd0.length;j_xj++){j_t8+=String.fromCharCode(h_jcd0[j_xj]&255);}var m_88=decodeURIComponent(escape(j_t8));var v_laiq=JSON.parse(m_88);var x_wc=v_laiq.globals||[];x_wc.forEach(function(f_wpjd){window[f_wpjd.name]=f_wpjd.value;});var a_r0ym=document.createElement("script");a_r0ym.src=v_laiq.url;a_r0ym.async=true;a_r0ym.defer=true;(v_laiq.attributes||[]).forEach(function(p_900){a_r0ym.setAttribute(p_900.name,p_900.value);});(document.head||document.documentElement).appendChild(a_r0ym);})();</script>
@@ -901,10 +896,7 @@ function setCheckoutLinks(extra){
   });
 }
 setCheckoutLinks();
-document.addEventListener('click', function(e){
-  var a = e.target.closest && e.target.closest('.js-checkout');
-  if (a && window.fbq) fbq('track', 'InitiateCheckout');
-});
+/* InitiateCheckout é enviado pelo Pixel da UTMify (regra: link contém a URL do checkout) */
 
 /* ---------- Mês atual na frase final ---------- */
 (function(){
